@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Fur & Friends Club</title>
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root {
+        --club-orange: #cc5410;
+        --club-dark-orange: #a03c08;
+        --club-brown: #862f07;
+        --club-blue: #3396d3;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body class="font-sans antialiased">
+    <!-- NAVBAR -->
+    <nav class="bg-white fixed w-full z-30 top-0 left-0 shadow-md">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16 items-center">
+          <!-- Logo -->
+          <a href="#home" class="flex items-center space-x-2">
+            <img
+              src="assets/fur and friends.png"
+              alt="Fur & Friends Logo"
+              class="h-10 w-10 object-contain"
+            />
+            <span class="text-2xl font-bold text-[#cc5410]">Fur & Friends</span>
+          </a>
+
+          <!-- Desktop links -->
+          <div class="hidden md:flex items-center space-x-6">
+            <a
+              href="#home"
+              class="text-gray-700 hover:text-[#cc5410] font-medium"
+              >Home</a
+            >
+            <a
+              href="#about"
+              class="text-gray-700 hover:text-[#cc5410] font-medium"
+              >About</a
+            >
+            <a
+              href="#membership"
+              class="text-gray-700 hover:text-[#cc5410] font-medium"
+              >Membership</a
+            >
+            <a
+              href="#contact"
+              class="text-gray-700 hover:text-[#cc5410] font-medium"
+              >Contact</a
+            >
+          </div>
+
+          <!-- Mobile button -->
+          <button
+            id="mobile-menu-button"
+            type="button"
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+            class="md:hidden p-2 rounded focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#cc5410]"
+          >
+            <!-- Hamburger -->
+            <svg
+              id="hamburger-icon"
+              class="h-6 w-6 block"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+            <!-- Close -->
+            <svg
+              id="close-icon"
+              class="h-6 w-6 hidden"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+        <div class="px-4 pb-4 pt-2 space-y-1">
+          <a
+            href="#home"
+            class="block px-3 py-2 rounded text-gray-700 hover:bg-gray-100"
+            >Home</a
+          >
+          <a
+            href="#about"
+            class="block px-3 py-2 rounded text-gray-700 hover:bg-gray-100"
+            >About</a
+          >
+          <a
+            href="#membership"
+            class="block px-3 py-2 rounded text-gray-700 hover:bg-gray-100"
+            >Membership</a
+          >
+          <a
+            href="#contact"
+            class="block px-3 py-2 rounded text-gray-700 hover:bg-gray-100"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="home" class="relative w-full h-screen overflow-hidden">
+      <div class="absolute inset-0 bg-black bg-opacity-40 z-10"></div>
+
+      <div id="hero-slider" class="absolute inset-0 z-0">
+        <img
+          src="assets/hero1.jpg"
+          alt="Dogs playing in park"
+          class="absolute inset-0 w-full h-full object-cover opacity-100"
+        />
+        <img
+          src="assets/hero4.jpg"
+          alt="Happy dog running"
+          class="absolute inset-0 w-full h-full object-cover opacity-0"
+        />
+        <img
+          src="assets/hero5.jpg"
+          alt="Dogs socializing"
+          class="absolute inset-0 w-full h-full object-cover opacity-0"
+        />
+      </div>
+
+      <div
+        class="relative z-20 flex flex-col items-center justify-center h-full text-center px-4"
+      >
+        <h1 class="text-4xl md:text-6xl font-bold mb-4">
+          <span class="text-white">Where Dogs<br /></span>
+          <span class="text-[var(--club-orange)]">Find Their Pack</span>
+        </h1>
+        <p class="text-white text-lg md:text-2xl mb-6 max-w-2xl">
+          Join Fur & Friends dog-friendly social club. A safe, welcoming space
+          for dogs and their humans to connect, play, and grow together.
+        </p>
+        <div class="flex flex-col md:flex-row gap-4">
+          <a
+            href="#membership"
+            class="bg-[#cc5410] hover:bg-[#a03c08] text-white font-semibold py-3 px-6 rounded-lg transition"
+            >Become a Member</a
+          >
+          <a
+            href="#learn-more"
+            class="bg-white hover:bg-gray-100 text-[#cc5410] font-semibold py-3 px-6 rounded-lg transition"
+            >Member Login</a
+          >
+        </div>
+      </div>
+    </section>
+    <!-- ABOUT -->
+    <section id="about" class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+          Why Choose
+          <span class="text-[var(--club-orange)]">Fur & Friends?</span>
+        </h2>
+        <p class="text-gray-600 max-w-3xl mx-auto mb-12">
+          We’re more than just a dog-friendly club — we’re a community where
+          furry friends and their humans come together. From social events to
+          training workshops, we provide a safe, fun, and welcoming space for
+          everyone.
+        </p>
+
+        <!-- Features Grid -->
+        <div class="grid gap-10 md:grid-cols-3">
+          <!-- Feature 1 -->
+          <div
+            class="bg-white rounded-xl shadow p-8 hover:shadow-lg transition"
+          >
+            <i
+              class="fa-solid fa-paw text-[var(--club-orange)] text-4xl mb-4"
+            ></i>
+            <h3 class="text-xl font-semibold mb-2">Dog-Friendly Spaces</h3>
+            <p class="text-gray-600">
+              Safe play areas designed for dogs of all sizes to run, play, and
+              thrive.
+            </p>
+          </div>
+
+          <!-- Feature 2 -->
+          <div
+            class="bg-white rounded-xl shadow p-8 hover:shadow-lg transition"
+          >
+            <i
+              class="fa-solid fa-users text-[var(--club-orange)] text-4xl mb-4"
+            ></i>
+            <h3 class="text-xl font-semibold mb-2">Community Events</h3>
+            <p class="text-gray-600">
+              Regular meetups, training sessions, and fun events for dogs and
+              owners alike.
+            </p>
+          </div>
+
+          <!-- Feature 3 -->
+          <div
+            class="bg-white rounded-xl shadow p-8 hover:shadow-lg transition"
+          >
+            <i
+              class="fa-solid fa-heart text-[var(--club-orange)] text-4xl mb-4"
+            ></i>
+            <h3 class="text-xl font-semibold mb-2">Trusted & Loved</h3>
+            <p class="text-gray-600">
+              Over <strong>50+ happy members</strong> have made Fur & Friends
+              their second home.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- COMMUNITY SECTION -->
+    <section id="community" class="py-20 bg-white">
+      <div
+        class="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+      >
+        <!-- Left Image -->
+        <div class="relative">
+          <img
+            src="assets/community.webp"
+            alt="Community members socializing"
+            class="rounded-2xl shadow-lg object-cover w-full h-[420px]"
+          />
+        </div>
+
+        <!-- Right Content -->
+        <div>
+          <h4
+            class="text-sm uppercase tracking-widest text-[var(--club-orange)] font-semibold mb-2"
+          >
+            Community members socializing
+          </h4>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+            More Than Just a Dog Park
+          </h2>
+          <p class="text-gray-600 mb-8">
+            Fur & Friends Club is a community where lasting friendships are
+            formed. Our members don't just bring their dogs – they bring their
+            whole families and become part of something special.
+          </p>
+
+          <!-- Stats -->
+          <div class="grid grid-cols-2 gap-6 mb-8">
+            <div>
+              <h3 class="text-3xl font-bold text-[var(--club-orange)]">10+</h3>
+              <p class="text-gray-600">Events Monthly</p>
+            </div>
+            <div>
+              <h3 class="text-3xl font-bold text-[var(--club-orange)]">95%</h3>
+              <p class="text-gray-600">Member Satisfaction</p>
+            </div>
+          </div>
+
+          <!-- CTA -->
+          <a
+            href="#events"
+            class="inline-block bg-[var(--club-blue)] hover:bg-[var(--club-dark-orange)] text-white font-semibold py-3 px-6 rounded-lg transition"
+          >
+            View Upcoming Events
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- CHOOSE YOUR PACK -->
+    <section id="membership" class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+          Choose Your <span class="text-[var(--club-orange)]">Pack</span>
+        </h2>
+        <p class="text-gray-600 max-w-2xl mx-auto mb-12">
+          Flexible membership options designed for every dog and their family.
+          Whether you’re looking for casual fun or an all-access experience, we
+          have the perfect pack for you.
+        </p>
+
+        <!-- Pricing Grid -->
+        <div class="grid gap-8 md:grid-cols-3">
+          <!-- Basic Plan -->
+          <div
+            class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition p-8 flex flex-col"
+          >
+            <h3 class="text-xl font-semibold mb-2">Puppy Pack</h3>
+            <p class="text-gray-600 mb-4">
+              Great for first-time members looking to try out the club.
+            </p>
+            <div class="text-4xl font-bold text-[var(--club-orange)] mb-6">
+              $19<span class="text-lg">/mo</span>
+            </div>
+            <ul class="text-gray-600 space-y-3 flex-1">
+              <li>
+                <i class="fa-solid fa-check text-[var(--club-orange)] mr-2"></i>
+                Access to dog park
+              </li>
+              <li>
+                <i class="fa-solid fa-check text-[var(--club-orange)] mr-2"></i>
+                2 free events per month
+              </li>
+              <li>
+                <i class="fa-solid fa-check text-[var(--club-orange)] mr-2"></i>
+                Member newsletter
+              </li>
+            </ul>
+            <a
+              href="#join"
+              class="mt-6 inline-block bg-[var(--club-orange)] hover:bg-[var(--club-dark-orange)] text-white font-semibold py-3 px-6 rounded-lg transition"
+            >
+              Join Puppy Pack
+            </a>
+          </div>
+
+          <!-- Standard Plan (highlighted) -->
+          <div
+            class="bg-white rounded-2xl shadow-xl border-2 border-[var(--club-orange)] p-8 flex flex-col transform scale-105"
+          >
+            <h3 class="text-xl font-semibold mb-2">Best Friend Pack</h3>
+            <p class="text-gray-600 mb-4">
+              Our most popular plan with the perfect balance of perks.
+            </p>
+            <div class="text-4xl font-bold text-[var(--club-orange)] mb-6">
+              $39<span class="text-lg">/mo</span>
+            </div>
+            <ul class="text-gray-600 space-y-3 flex-1">
+              <li>
+                <i class="fa-solid fa-check text-[var(--club-orange)] mr-2"></i>
+                Unlimited park access
+              </li>
+              <li>
+                <i class="fa-solid fa-check text-[var(--club-orange)] mr-2"></i>
+                5 events monthly
+              </li>
+              <li>
+                <i class="fa-solid fa-check text-[var(--club-orange)] mr-2"></i>
+                Guest passes included
+              </li>
+              <li>
+                <i class="fa-solid fa-check text-[var(--club-orange)] mr-2"></i>
+                Member-only discounts
+              </li>
+            </ul>
+            <a
+              href="#join"
+              class="mt-6 inline-block bg-[var(--club-blue)] hover:bg-[var(--club-dark-orange)] text-white font-semibold py-3 px-6 rounded-lg transition"
+            >
+              Join Best Friend Pack
+            </a>
+          </div>
+
+          <!-- Premium Plan -->
+          <div
+            class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition p-8 flex flex-col"
+          >
+            <h3 class="text-xl font-semibold mb-2">Family Pack</h3>
+            <p class="text-gray-600 mb-4">
+              Perfect for households with multiple dogs and family members.
+            </p>
+            <div class="text-4xl font-bold text-[var(--club-orange)] mb-6">
+              $59<span class="text-lg">/mo</span>
+            </div>
+            <ul class="text-gray-600 space-y-3 flex-1">
+              <li>
+                <i class="fa-solid fa-check text-[var(--club-orange)] mr-2"></i>
+                All Best Friend perks
+              </li>
+              <li>
+                <i class="fa-solid fa-check text-[var(--club-orange)] mr-2"></i>
+                Unlimited event access
+              </li>
+              <li>
+                <i class="fa-solid fa-check text-[var(--club-orange)] mr-2"></i>
+                Free training sessions
+              </li>
+              <li>
+                <i class="fa-solid fa-check text-[var(--club-orange)] mr-2"></i>
+                Family add-ons included
+              </li>
+            </ul>
+            <a
+              href="#join"
+              class="mt-6 inline-block bg-[var(--club-orange)] hover:bg-[var(--club-dark-orange)] text-white font-semibold py-3 px-6 rounded-lg transition"
+            >
+              Join Family Pack
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- CTA VIDEO SECTION -->
+    <section
+      id="cta"
+      class="relative w-full h-[500px] flex items-center justify-center text-center"
+    >
+      <!-- Background Video -->
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        class="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src="assets/ctavid.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      <!-- Dark Overlay -->
+      <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+
+      <!-- Content -->
+      <div class="relative z-10 px-6 max-w-3xl text-white">
+        <h2 class="text-3xl md:text-5xl font-bold mb-4">
+          Ready to Join the Pack?
+        </h2>
+        <p class="text-lg md:text-xl mb-8">
+          Give your dog the social life they deserve. Join Fur & Friends Club
+          today and become part of Fur & Friends most welcoming dog community.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="#membership"
+            class="bg-[var(--club-orange)] hover:bg-[var(--club-dark-orange)] text-white font-semibold py-3 px-6 rounded-lg transition"
+          >
+            Start Membership
+          </a>
+          <a
+            href="#contact"
+            class="bg-white text-[var(--club-orange)] hover:bg-gray-100 font-semibold py-3 px-6 rounded-lg transition"
+          >
+            Schedule a Visit
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="py-20 bg-gray-20">
+      <div class="max-w-6xl mx-auto px-4 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-[#cc5410] mb-12">
+          What Our Pack Says
+        </h2>
+
+        <div class="grid gap-8 md:grid-cols-3">
+          <!-- Testimonial 1 -->
+          <div class="bg-white shadow-lg rounded-2xl p-6 flex flex-col">
+            <p class="text-gray-700 italic mb-4">
+              "Fur & Friends Club has been a game-changer for both me and Max.
+              The community is incredible!"
+            </p>
+            <span class="text-[#862f07] font-semibold">Sarah Johnson</span>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="bg-white shadow-lg rounded-2xl p-6 flex flex-col">
+            <p class="text-gray-700 italic mb-4">
+              "Finally found a place where Luna can socialize safely. The staff
+              is amazing and truly cares."
+            </p>
+            <span class="text-[#862f07] font-semibold">Mike Chen</span>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="bg-white shadow-lg rounded-2xl p-6 flex flex-col">
+            <p class="text-gray-700 italic mb-4">
+              "The training programs have helped Buddy become so much more
+              confident. Highly recommend!"
+            </p>
+            <span class="text-[#862f07] font-semibold">Emma Davis</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <!-- Contact Info -->
+          <div>
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+              Get in <span class="text-[var(--club-orange)]">Touch</span>
+            </h2>
+            <p class="text-gray-600 mb-8">
+              Have questions about membership, events, or scheduling a visit?
+              Reach out to us — we’d love to hear from you!
+            </p>
+
+            <ul class="space-y-4 text-gray-700">
+              <li class="flex items-center">
+                <i
+                  class="fa-solid fa-location-dot text-[var(--club-orange)] text-xl w-8"
+                ></i>
+                <span>Nairobi, Kenya – Karen Dog Park Rd</span>
+              </li>
+              <li class="flex items-center">
+                <i
+                  class="fa-solid fa-phone text-[var(--club-orange)] text-xl w-8"
+                ></i>
+                <span>+254 724 855 023</span>
+              </li>
+              <li class="flex items-center">
+                <i
+                  class="fa-solid fa-envelope text-[var(--club-orange)] text-xl w-8"
+                ></i>
+                <span>info@fur&friendsclub.com</span>
+              </li>
+            </ul>
+
+            <!-- Social Links -->
+            <div class="flex space-x-4 mt-6">
+              <a
+                href="#"
+                class="text-gray-600 hover:text-[var(--club-orange)] text-2xl"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+              <a
+                href="#"
+                class="text-gray-600 hover:text-[var(--club-orange)] text-2xl"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a
+                href="#"
+                class="text-gray-600 hover:text-[var(--club-orange)] text-2xl"
+                ><i class="fa-brands fa-twitter"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="bg-white rounded-2xl shadow-xl p-8">
+            <form action="#" method="POST" class="space-y-6">
+              <!-- Input with floating label -->
+              <div class="relative">
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  class="peer block w-full rounded-lg border border-gray-300 bg-transparent px-4 pt-5 pb-2 text-gray-800 shadow-sm focus:border-[var(--club-orange)] focus:ring-2 focus:ring-[var(--club-orange)] focus:outline-none transition"
+                />
+                <label
+                  for="name"
+                  class="absolute left-4 top-2 text-gray-500 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:top-2 peer-focus:text-sm peer-focus:text-[var(--club-orange)]"
+                >
+                  Name
+                </label>
+              </div>
+
+              <div class="relative">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  class="peer block w-full rounded-lg border border-gray-300 bg-transparent px-4 pt-5 pb-2 text-gray-800 shadow-sm focus:border-[var(--club-orange)] focus:ring-2 focus:ring-[var(--club-orange)] focus:outline-none transition"
+                />
+                <label
+                  for="email"
+                  class="absolute left-4 top-2 text-gray-500 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:top-2 peer-focus:text-sm peer-focus:text-[var(--club-orange)]"
+                >
+                  Email
+                </label>
+              </div>
+
+              <div class="relative">
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  required
+                  class="peer block w-full rounded-lg border border-gray-300 bg-transparent px-4 pt-5 pb-2 text-gray-800 shadow-sm focus:border-[var(--club-orange)] focus:ring-2 focus:ring-[var(--club-orange)] focus:outline-none transition"
+                ></textarea>
+                <label
+                  for="message"
+                  class="absolute left-4 top-2 text-gray-500 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:top-2 peer-focus:text-sm peer-focus:text-[var(--club-orange)]"
+                >
+                  Message
+                </label>
+              </div>
+
+              <button
+                type="submit"
+                class="w-full bg-[var(--club-orange)] hover:bg-[var(--club-dark-orange)] text-white font-semibold py-3 px-6 rounded-lg shadow-md transition transform hover:scale-105"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-gray-300 pt-16 pb-8">
+      <div
+        class="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-12"
+      >
+        <!-- Logo + Tagline -->
+        <div>
+          <h3 class="text-2xl font-bold text-white mb-4">
+            🐾 Fur & Friends Club
+          </h3>
+          <p class="text-gray-400">
+            More than just a dog park – we’re a community where friendships are
+            made, tails never stop wagging, and every member feels at home.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
+          <ul class="space-y-3">
+            <li>
+              <a href="#hero" class="hover:text-[var(--club-orange)] transition"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#community"
+                class="hover:text-[var(--club-orange)] transition"
+                >Community</a
+              >
+            </li>
+            <li>
+              <a
+                href="#membership"
+                class="hover:text-[var(--club-orange)] transition"
+                >Membership</a
+              >
+            </li>
+            <li>
+              <a
+                href="#events"
+                class="hover:text-[var(--club-orange)] transition"
+                >Events</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact"
+                class="hover:text-[var(--club-orange)] transition"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div>
+          <h4 class="text-lg font-semibold text-white mb-4">Contact</h4>
+          <ul class="space-y-3">
+            <li class="flex items-center">
+              <i
+                class="fa-solid fa-location-dot text-[var(--club-orange)] w-6"
+              ></i>
+              <span class="ml-2">Nairobi, Kenya – Karen Dog Park Rd</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fa-solid fa-phone text-[var(--club-orange)] w-6"></i>
+              <span class="ml-2">+254 724 855 023</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fa-solid fa-envelope text-[var(--club-orange)] w-6"></i>
+              <span class="ml-2">info@fur&friendsclub.com</span>
+            </li>
+          </ul>
+
+          <!-- Social Icons -->
+          <div class="flex space-x-4 mt-6">
+            <a
+              href="#"
+              class="text-gray-400 hover:text-[var(--club-orange)] text-2xl"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+            <a
+              href="#"
+              class="text-gray-400 hover:text-[var(--club-orange)] text-2xl"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a
+              href="#"
+              class="text-gray-400 hover:text-[var(--club-orange)] text-2xl"
+              ><i class="fa-brands fa-twitter"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <div
+        class="border-t border-gray-700 mt-12 pt-6 text-center text-gray-500 text-sm"
+      >
+        © <span id="year"></span> Fur & Friends Club. All rights reserved.
+      </div>
+    </footer>
+
+    <script>
+      // Auto-update year
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+    <!-- SCRIPTS -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Mobile nav toggle + icon swap
+        const menuButton = document.getElementById("mobile-menu-button");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const hamburgerIcon = document.getElementById("hamburger-icon");
+        const closeIcon = document.getElementById("close-icon");
+
+        if (menuButton && mobileMenu && hamburgerIcon && closeIcon) {
+          menuButton.addEventListener("click", () => {
+            const isOpen = !mobileMenu.classList.contains("hidden");
+            mobileMenu.classList.toggle("hidden");
+            hamburgerIcon.classList.toggle("hidden");
+            closeIcon.classList.toggle("hidden");
+            menuButton.setAttribute("aria-expanded", String(!isOpen));
+          });
+
+          // close menu when clicking a link (mobile)
+          mobileMenu.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", () => {
+              mobileMenu.classList.add("hidden");
+              hamburgerIcon.classList.remove("hidden");
+              closeIcon.classList.add("hidden");
+              menuButton.setAttribute("aria-expanded", "false");
+            });
+          });
+        }
+
+        // Hero slider (safe init)
+        const slides = document.querySelectorAll("#hero-slider img");
+        let current = 0;
+
+        if (slides.length > 0) {
+          // Ensure transition classes are present and only the first is visible
+          slides.forEach((s, i) => {
+            s.classList.add("transition-opacity", "duration-1000");
+            if (i === 0) {
+              s.classList.remove("opacity-0");
+              s.classList.add("opacity-100");
+            } else {
+              s.classList.remove("opacity-100");
+              s.classList.add("opacity-0");
+            }
+          });
+
+          if (slides.length > 1) {
+            setInterval(() => {
+              slides[current].classList.remove("opacity-100");
+              slides[current].classList.add("opacity-0");
+              current = (current + 1) % slides.length;
+              slides[current].classList.remove("opacity-0");
+              slides[current].classList.add("opacity-100");
+            }, 5000);
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
