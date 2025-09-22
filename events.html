@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events - Fur & Friends Club</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-50 text-gray-800">
+    <!-- Header -->
+    <header class="bg-white shadow">
+      <div
+        class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <h1 class="text-xl font-bold text-[#cc5410]">Fur & Friends Club</h1>
+        <nav class="hidden md:flex space-x-6">
+          <a href="index.html" class="hover:text-[#cc5410]">Home</a>
+          <a href="about.html" class="hover:text-[#cc5410]">About</a>
+          <a href="gallery.html" class="hover:text-[#cc5410]">Gallery</a>
+          <a href="events.html" class="text-[#cc5410] font-semibold">Events</a>
+          <a href="contact.html" class="hover:text-[#cc5410]">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Page Title -->
+    <section class="bg-[#E1AD01] py-10 text-center text-white">
+      <h2 class="text-3xl font-bold">Our Events</h2>
+      <p class="mt-2">
+        Join us for fun-filled activities and community bonding
+      </p>
+    </section>
+
+    <main class="max-w-7xl mx-auto px-4 py-12">
+      <!-- Upcoming Events -->
+      <section class="mb-16">
+        <h3 class="text-2xl font-bold text-gray-800 mb-6">Upcoming Events</h3>
+        <div class="grid md:grid-cols-3 gap-6">
+          <!-- Event Card -->
+          <div class="bg-white shadow rounded-xl overflow-hidden flex flex-col">
+            <img
+              src="assets/hero4.webp"
+              alt="Event 1"
+              class="h-48 w-full object-cover"
+            />
+            <div class="p-4 flex-1 flex flex-col">
+              <h4 class="text-lg font-semibold mb-2">Dog Training Workshop</h4>
+              <p class="text-sm text-gray-600 flex-1">
+                Learn tips and tricks from professional trainers. A fun and
+                educational experience for both pets and owners.
+              </p>
+              <p class="mt-3 text-sm text-gray-500">📅 Sept 30, 2025</p>
+              <button
+                onclick="openModal('Dog Training Workshop')"
+                class="mt-auto inline-block bg-[#cc5410] text-white px-4 py-2 rounded-lg text-center hover:bg-[#a03c08]"
+              >
+                Register
+              </button>
+            </div>
+          </div>
+
+          <!-- Event Card -->
+          <div class="bg-white shadow rounded-xl overflow-hidden flex flex-col">
+            <img
+              src="assets/hero1.webp"
+              alt="Event 2"
+              class="h-48 w-full object-cover"
+            />
+            <div class="p-4 flex-1 flex flex-col">
+              <h4 class="text-lg font-semibold mb-2">Paw-some Picnic</h4>
+              <p class="text-sm text-gray-600 flex-1">
+                A relaxing outdoor picnic with games, treats, and socializing
+                for both pets and owners. Don’t forget your mat!
+              </p>
+              <p class="mt-3 text-sm text-gray-500">📅 Oct 15, 2025</p>
+              <button
+                onclick="openModal('Paw-some Picnic')"
+                class="mt-auto inline-block bg-[#cc5410] text-white px-4 py-2 rounded-lg text-center hover:bg-[#a03c08]"
+              >
+                Register
+              </button>
+            </div>
+          </div>
+
+          <!-- Event Card -->
+          <div class="bg-white shadow rounded-xl overflow-hidden flex flex-col">
+            <img
+              src="assets/community.jpeg"
+              alt="Event 3"
+              class="h-48 w-full object-cover"
+            />
+            <div class="p-4 flex-1 flex flex-col">
+              <h4 class="text-lg font-semibold mb-2">
+                Halloween Costume Parade
+              </h4>
+              <p class="text-sm text-gray-600 flex-1">
+                Dress up your pets in spooky or funny costumes and join the
+                parade. Prizes for the best dressed!
+              </p>
+              <p class="mt-3 text-sm text-gray-500">📅 Oct 31, 2025</p>
+              <button
+                onclick="openModal('Halloween Costume Parade')"
+                class="mt-auto inline-block bg-[#cc5410] text-white px-4 py-2 rounded-lg text-center hover:bg-[#a03c08]"
+              >
+                Register
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Past Events -->
+      <section>
+        <h3 class="text-2xl font-bold text-gray-800 mb-6">Past Events</h3>
+        <div class="grid md:grid-cols-3 gap-6">
+          <!-- Event Card -->
+          <div class="bg-white shadow rounded-xl overflow-hidden flex flex-col">
+            <img
+              src="assets/community.webp"
+              alt="Past Event 1"
+              class="h-48 w-full object-cover"
+            />
+            <div class="p-4 flex-1 flex flex-col">
+              <h4 class="text-lg font-semibold mb-2">Summer Splash</h4>
+              <p class="text-sm text-gray-600 flex-1">
+                Pets enjoyed a fun day at the splash park with pools,
+                sprinklers, and lots of happy wagging tails.
+              </p>
+              <p class="mt-3 text-sm text-gray-500">📅 Aug 20, 2025</p>
+            </div>
+          </div>
+
+          <!-- Event Card -->
+          <div class="bg-white shadow rounded-xl overflow-hidden flex flex-col">
+            <img
+              src="assets/community.webp"
+              alt="Past Event 2"
+              class="h-48 w-full object-cover"
+            />
+            <div class="p-4 flex-1 flex flex-col">
+              <h4 class="text-lg font-semibold mb-2">Charity Walk</h4>
+              <p class="text-sm text-gray-600 flex-1">
+                A community walk to raise funds for local shelters. Great
+                turnout and lots of happy steps!
+              </p>
+              <p class="mt-3 text-sm text-gray-500">📅 July 10, 2025</p>
+            </div>
+          </div>
+
+          <!-- Event Card -->
+          <div class="bg-white shadow rounded-xl overflow-hidden flex flex-col">
+            <img
+              src="assets/community.webp"
+              alt="Past Event 3"
+              class="h-48 w-full object-cover"
+            />
+            <div class="p-4 flex-1 flex flex-col">
+              <h4 class="text-lg font-semibold mb-2">Adoption Day</h4>
+              <p class="text-sm text-gray-600 flex-1">
+                Partnered with local shelters, many furry friends found their
+                forever homes.
+              </p>
+              <p class="mt-3 text-sm text-gray-500">📅 June 5, 2025</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Register Modal -->
+    <div
+      id="registerModal"
+      class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50"
+    >
+      <div class="bg-white rounded-xl shadow-lg max-w-md w-full p-6 relative">
+        <button
+          onclick="closeModal()"
+          class="absolute top-3 right-3 text-gray-600 hover:text-gray-900"
+        >
+          ✖
+        </button>
+        <h3 id="modalEventTitle" class="text-xl font-bold mb-4">Register</h3>
+        <form class="space-y-4">
+          <input
+            type="text"
+            placeholder="Your Name"
+            class="w-full border rounded-lg px-3 py-2"
+            required
+          />
+          <input
+            type="email"
+            placeholder="Your Email"
+            class="w-full border rounded-lg px-3 py-2"
+            required
+          />
+          <input
+            type="tel"
+            placeholder="Phone Number"
+            class="w-full border rounded-lg px-3 py-2"
+          />
+          <button
+            type="submit"
+            class="w-full bg-[#cc5410] text-white px-4 py-2 rounded-lg hover:bg-[#a03c08]"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-6 text-center mt-12">
+      <p>&copy; 2025 Fur & Friends Club. All rights reserved.</p>
+    </footer>
+
+    <!-- Modal Script -->
+    <script>
+      function openModal(eventTitle) {
+        document.getElementById("registerModal").classList.remove("hidden");
+        document.getElementById("registerModal").classList.add("flex");
+        document.getElementById("modalEventTitle").textContent =
+          "Register for " + eventTitle;
+      }
+      function closeModal() {
+        document.getElementById("registerModal").classList.add("hidden");
+        document.getElementById("registerModal").classList.remove("flex");
+      }
+    </script>
+  </body>
+</html>

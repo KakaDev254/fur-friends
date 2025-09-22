@@ -39,45 +39,6 @@
     <!-- HEADER (wrapper for info bar + navbar) -->
     <header id="header" class="fixed w-full z-30 top-0 left-0">
       <!-- TOP INFO BAR -->
-      <div
-        id="info-bar"
-        class="hidden md:flex bg-transparent text-white text-sm transition-colors duration-300"
-      >
-        <div
-          class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between w-full"
-        >
-          <!-- Left side: social media -->
-          <div class="flex items-center space-x-4">
-            <a href="#" class="hover:text-[var(--club-orange)] transition">
-              <i class="bx bxl-facebook"></i>
-            </a>
-            <a href="#" class="hover:text-[var(--club-orange)] transition">
-              <i class="bx bxl-instagram"></i>
-            </a>
-            <a href="#" class="hover:text-[var(--club-orange)] transition">
-              <i class="bx bxl-twitter"></i>
-            </a>
-          </div>
-
-          <!-- Right side: contact -->
-          <div class="flex items-center space-x-6">
-            <a
-              href="tel:+254700123456"
-              class="flex items-center space-x-2 hover:text-[var(--club-orange)] transition"
-            >
-              <i class="bx bx-phone"></i>
-              <span>+254 700 123 456</span>
-            </a>
-            <a
-              href="mailto:info@thepetpeople.com"
-              class="flex items-center space-x-2 hover:text-[var(--club-orange)] transition"
-            >
-              <i class="bx bx-envelope"></i>
-              <span>info@thepetpeople.com</span>
-            </a>
-          </div>
-        </div>
-      </div>
 
       <!-- NAVBAR -->
       <nav
@@ -95,7 +56,7 @@
               />
               <span
                 id="logo-text"
-                class="text-2xl font-bold text-white transition-colors"
+                class="text-2xl font-bold text-[var(--club-maroon)] transition-colors"
                 >ThePetPeople</span
               >
             </a>
@@ -106,14 +67,16 @@
               <a href="#about" class="nav-link text-white">About</a>
               <a href="#membership" class="nav-link text-white">Membership</a>
               <a href="#membership" class="nav-link text-white">Gallery</a>
+              <a href="#membership" class="nav-link text-white">Events</a>
               <a href="#contact" class="nav-link text-white">Contact</a>
+              <a href="#contact" class="nav-link text-white">Blogs</a>
             </div>
 
             <!-- Member Login Button (Desktop only) -->
             <div class="hidden md:block">
               <a
                 href="#login"
-                class="hidden md:inline-block bg-[#E1AD01] hover:bg-[#cc5410] text-white font-semibold py-2 px-4 rounded-lg transition nav-btn"
+                class="hidden md:inline-block bg-[var(--club-maroon)] hover:bg-[#cc5410] text-white font-semibold py-2 px-4 rounded-lg transition nav-btn"
               >
                 Member Login
               </a>
@@ -180,14 +143,24 @@
               >Membership</a
             >
             <a
-              href="#membership"
+              href="#gallery"
               class="block px-3 py-2 rounded text-gray-700 hover:bg-gray-100"
               >Gallery</a
+            >
+            <a
+              href="#gallery"
+              class="block px-3 py-2 rounded text-gray-700 hover:bg-gray-100"
+              >Events</a
             >
             <a
               href="#contact"
               class="block px-3 py-2 rounded text-gray-700 hover:bg-gray-100"
               >Contact</a
+            >
+            <a
+              href="#contact"
+              class="block px-3 py-2 rounded text-gray-700 hover:bg-gray-100"
+              >Blogs</a
             >
             <a
               href="#login"
@@ -196,8 +169,82 @@
               Member Login
             </a>
           </div>
+
+          <!-- Divider -->
+          <div class="border-t my-2"></div>
+
+          <!-- Contact Info -->
+          <div class="px-4 pb-4 text-gray-700 space-y-2">
+            <div class="flex items-center space-x-2">
+              <i class="bx bx-envelope text-xl text-[#E1AD01]"></i>
+              <a href="mailto:info@petpeople.com" class="hover:text-[#cc5410]"
+                >info@petpeople.com</a
+              >
+            </div>
+            <div class="flex items-center space-x-2">
+              <i class="bx bx-phone text-xl text-[#E1AD01]"></i>
+              <a href="tel:+1234567890" class="hover:text-[#cc5410]"
+                >+1 234 567 890</a
+              >
+            </div>
+
+            <!-- Social Media -->
+            <div class="flex space-x-4 mt-3">
+              <a href="#" class="text-gray-600 hover:text-[#cc5410] text-2xl"
+                ><i class="bx bxl-facebook"></i
+              ></a>
+              <a href="#" class="text-gray-600 hover:text-[#cc5410] text-2xl"
+                ><i class="bx bxl-instagram"></i
+              ></a>
+              <a href="#" class="text-gray-600 hover:text-[#cc5410] text-2xl"
+                ><i class="bx bxl-twitter"></i
+              ></a>
+              <a href="#" class="text-gray-600 hover:text-[#cc5410] text-2xl"
+                ><i class="bx bxl-whatsapp"></i
+              ></a>
+            </div>
+          </div>
         </div>
       </nav>
+      <div
+        id="info-bar"
+        class="hidden md:flex bg-white text-dark text-sm transition-colors duration-300 py-[2px]"
+      >
+        <div
+          class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between w-full"
+        >
+          <!-- Left side: social media -->
+          <div class="flex items-center space-x-4">
+            <a href="#" class="hover:text-[var(--club-orange)] transition">
+              <i class="bx bxl-facebook"></i>
+            </a>
+            <a href="#" class="hover:text-[var(--club-orange)] transition">
+              <i class="bx bxl-instagram"></i>
+            </a>
+            <a href="#" class="hover:text-[var(--club-orange)] transition">
+              <i class="bx bxl-twitter"></i>
+            </a>
+          </div>
+
+          <!-- Right side: contact -->
+          <div class="flex items-center space-x-6">
+            <a
+              href="tel:+254700123456"
+              class="flex items-center space-x-2 hover:text-[var(--club-orange)] transition"
+            >
+              <i class="bx bx-phone"></i>
+              <span>+254 700 123 456</span>
+            </a>
+            <a
+              href="mailto:info@thepetpeople.com"
+              class="flex items-center space-x-2 hover:text-[var(--club-orange)] transition"
+            >
+              <i class="bx bx-envelope"></i>
+              <span>info@thepetpeople.com</span>
+            </a>
+          </div>
+        </div>
+      </div>
     </header>
 
     <!-- HERO -->
@@ -250,7 +297,10 @@
         <h1
           class="text-4xl md:text-6xl font-semibold mb-4 leading-tight font-['Playfair_Display']"
         >
-          <span class="text-white">Where Pets Thrive</span><br />
+          <span class="text-white">Where Pets Thrive</span>
+          <span class="block md:inline">
+            <br class="md:hidden" />
+          </span>
           <span class="text-[var(--club-orange)]">Together</span>
         </h1>
 
@@ -288,6 +338,41 @@
         </div>
       </div>
     </section>
+    <!-- Floating Social Menu (Mobile only) -->
+    <div class="fixed bottom-6 right-6 md:hidden z-50">
+      <!-- Social Icons (hidden initially) -->
+      <div
+        id="social-icons"
+        class="hidden flex flex-col items-center space-y-3 mb-3"
+      >
+        <a
+          href="#"
+          class="w-12 h-12 flex items-center justify-center rounded-full bg-[#1877F2] text-white shadow-lg"
+        >
+          <i class="bx bxl-facebook text-2xl"></i>
+        </a>
+        <a
+          href="#"
+          class="w-12 h-12 flex items-center justify-center rounded-full bg-[#E4405F] text-white shadow-lg"
+        >
+          <i class="bx bxl-instagram text-2xl"></i>
+        </a>
+        <a
+          href="#"
+          class="w-12 h-12 flex items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg"
+        >
+          <i class="bx bxl-whatsapp text-2xl"></i>
+        </a>
+      </div>
+
+      <!-- Toggle Button -->
+      <button
+        id="social-toggle"
+        class="w-14 h-14 flex items-center justify-center rounded-full bg-[#E1AD01] text-white shadow-lg"
+      >
+        <i id="toggle-icon" class="bx bx-message-rounded-dots text-3xl"></i>
+      </button>
+    </div>
 
     <!-- ABOUT -->
     <section id="about" class="py-16 bg-gray-50">
@@ -376,7 +461,7 @@
     </section>
 
     <!-- COMMUNITY SECTION -->
-    <section id="community" class="py-20 bg-white">
+    <section id="community" class="py-20 bg-[var(--club-maroon)]">
       <div
         class="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
       >
@@ -400,7 +485,7 @@
           <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
             More Than Just a Dog Park
           </h2>
-          <p class="text-gray-600 mb-8">
+          <p class="text-gray-200 mb-8">
             Fur & Friends Club is a community where lasting friendships are
             formed. Our members don't just bring their dogs – they bring their
             whole families and become part of something special.
@@ -596,6 +681,94 @@
         </div>
       </div>
     </section>
+    <!-- BLOG SECTION -->
+    <section id="blog" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+          Latest <span class="text-[var(--club-orange)]">Blog Posts</span>
+        </h2>
+        <p class="text-gray-600 max-w-2xl mx-auto mb-12">
+          Stay updated with pet care tips, community stories, and the latest
+          happenings at The Pet People.
+        </p>
+
+        <!-- Blog Grid -->
+        <div class="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          <!-- Blog Card 1 -->
+          <div
+            class="bg-gray-50 rounded-2xl shadow hover:shadow-lg transition overflow-hidden"
+          >
+            <img
+              src="assets/hero1.webp"
+              alt="Pet Care"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6 text-left">
+              <h3 class="text-xl font-semibold mb-2">
+                Top 10 Tips for Happy Pets
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Learn the best practices to keep your furry friends healthy and
+                full of joy.
+              </p>
+              <a
+                href="#"
+                class="text-[var(--club-orange)] font-semibold hover:underline"
+                >Read More →</a
+              >
+            </div>
+          </div>
+
+          <!-- Blog Card 2 -->
+          <div
+            class="bg-gray-50 rounded-2xl shadow hover:shadow-lg transition overflow-hidden"
+          >
+            <img
+              src="assets/hero4.webp"
+              alt="Community Event"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6 text-left">
+              <h3 class="text-xl font-semibold mb-2">
+                Highlights from Our Last Event
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Catch up on the fun moments from our recent community meetup.
+              </p>
+              <a
+                href="#"
+                class="text-[var(--club-orange)] font-semibold hover:underline"
+                >Read More →</a
+              >
+            </div>
+          </div>
+
+          <!-- Blog Card 3 -->
+          <div
+            class="bg-gray-50 rounded-2xl shadow hover:shadow-lg transition overflow-hidden"
+          >
+            <img
+              src="assets/hero6.webp"
+              alt="Pet Health"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6 text-left">
+              <h3 class="text-xl font-semibold mb-2">
+                Essential Health Checks for Dogs
+              </h3>
+              <p class="text-gray-600 mb-4">
+                A quick guide to the most important vet checks every dog needs.
+              </p>
+              <a
+                href="#"
+                class="text-[var(--club-orange)] font-semibold hover:underline"
+                >Read More →</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- TESTIMONIALS -->
     <section id="testimonials" class="py-20 bg-gray-20">
       <div class="max-w-6xl mx-auto px-4 text-center">
@@ -633,6 +806,7 @@
         </div>
       </div>
     </section>
+
     <!-- CONTACT SECTION -->
     <section id="contact" class="py-20 bg-gray-50">
       <div class="max-w-7xl mx-auto px-6 lg:px-8">
@@ -873,13 +1047,11 @@
         const hamburgerIcon = document.getElementById("hamburger-icon");
         const closeIcon = document.getElementById("close-icon");
 
-        // Navbar + Info Bar scroll effect
+        // Navbar scroll effect (without info bar)
         window.addEventListener("scroll", () => {
           if (window.scrollY > 50) {
             navbar.classList.add("bg-white", "shadow-md");
             navbar.classList.remove("bg-transparent");
-            infoBar.classList.add("bg-[#3E5622]");
-            infoBar.classList.remove("bg-transparent");
 
             logoText.classList.remove("text-white");
             logoText.classList.add("text-[#cc5410]");
@@ -897,8 +1069,6 @@
           } else {
             navbar.classList.remove("bg-white", "shadow-md");
             navbar.classList.add("bg-transparent");
-            infoBar.classList.remove("bg-[#3E5622]");
-            infoBar.classList.add("bg-transparent");
 
             logoText.classList.add("text-white");
             logoText.classList.remove("text-[#cc5410]");
@@ -972,6 +1142,22 @@
               slides[current].classList.add("opacity-100");
             }, 5000);
           }
+        }
+      });
+    </script>
+    <script>
+      const toggleBtn = document.getElementById("social-toggle");
+      const toggleIcon = document.getElementById("toggle-icon");
+      const socialIcons = document.getElementById("social-icons");
+
+      toggleBtn.addEventListener("click", () => {
+        socialIcons.classList.toggle("hidden");
+        if (socialIcons.classList.contains("hidden")) {
+          toggleIcon.classList.remove("bx-x");
+          toggleIcon.classList.add("bx-message-rounded-dots");
+        } else {
+          toggleIcon.classList.remove("bx-message-rounded-dots");
+          toggleIcon.classList.add("bx-x");
         }
       });
     </script>
