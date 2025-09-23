@@ -5,72 +5,421 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blog Details - Fur & Friends Club</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Satisfy&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --club-dark-brown: #3f2c00;
+        --club-olive: #454024;
+        --club-rust: #823210;
+        --club-sand: #d2b699;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-family: "Cinzel", serif;
+      }
+    </style>
   </head>
-  <body class="bg-gray-50 text-gray-800">
+  <body class="bg-[var(--club-sand)] text-[var(--club-olive)]">
     <!-- Header -->
-    <header class="bg-white shadow">
+
+    <header id="header" class="fixed w-full z-30 top-0 left-0">
+      <!-- INFO BAR -->
       <div
-        class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center"
+        id="info-bar"
+        class="hidden md:flex bg-[var(--club-sand)] text-[var(--club-dark-brown)] text-sm transition-colors duration-300 py-[2px]"
       >
-        <h1 class="text-xl font-bold text-[#cc5410]">Fur & Friends Club</h1>
-        <nav class="hidden md:flex space-x-6">
-          <a href="index.html" class="hover:text-[#cc5410]">Home</a>
-          <a href="about.html" class="hover:text-[#cc5410]">About</a>
-          <a href="gallery.html" class="hover:text-[#cc5410]">Gallery</a>
-          <a href="events.html" class="hover:text-[#cc5410]">Events</a>
-          <a href="blog.html" class="text-[#cc5410] font-semibold">Blog</a>
-          <a href="contact.html" class="hover:text-[#cc5410]">Contact</a>
-        </nav>
+        <div
+          class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between w-full items-center"
+        >
+          <!-- Left side: social media -->
+          <div class="flex items-center space-x-4">
+            <a
+              href="#"
+              class="hover:text-[var(--club-rust)] transition"
+              aria-label="Facebook"
+            >
+              <i class="bx bxl-facebook"></i>
+            </a>
+            <a
+              href="#"
+              class="hover:text-[var(--club-rust)] transition"
+              aria-label="Instagram"
+            >
+              <i class="bx bxl-instagram"></i>
+            </a>
+            <a
+              href="#"
+              class="hover:text-[var(--club-rust)] transition"
+              aria-label="Twitter"
+            >
+              <i class="bx bxl-twitter"></i>
+            </a>
+          </div>
+
+          <!-- Right side: contact -->
+          <div class="flex items-center space-x-6 font-['Montserrat']">
+            <a
+              href="tel:+254700123456"
+              class="flex items-center space-x-2 hover:text-[var(--club-rust)] transition"
+            >
+              <i class="bx bx-phone" aria-hidden="true"></i>
+              <span class="sr-only">Call</span>
+              <span>+254 700 123 456</span>
+            </a>
+            <a
+              href="mailto:info@thepetpeople.com"
+              class="flex items-center space-x-2 hover:text-[var(--club-rust)] transition"
+            >
+              <i class="bx bx-envelope" aria-hidden="true"></i>
+              <span class="sr-only">Email</span>
+              <span>info@thepetpeople.com</span>
+            </a>
+          </div>
+        </div>
       </div>
+
+      <!-- NAVBAR -->
+      <nav
+        id="navbar"
+        role="navigation"
+        aria-label="Main navigation"
+        class="navbar w-full bg-transparent transition-colors duration-300"
+      >
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex justify-between h-16 items-center">
+            <!-- Logo -->
+            <a href="#home" class="flex items-center space-x-3">
+              <span
+                id="logo-text"
+                class="text-2xl font-bold text-[var(--club-rust)] transition-colors"
+                style="font-family: 'Satisfy', cursive"
+              >
+                ThePetPeople
+              </span>
+            </a>
+
+            <!-- Desktop links -->
+            <div
+              class="hidden md:flex items-center space-x-6 font-['Montserrat'] uppercase tracking-wide"
+            >
+              <a
+                href="index.html"
+                class="nav-link text-white hover:text-[var(--club-sand)]"
+                >Home</a
+              >
+              <a
+                href="#about"
+                class="nav-link text-white hover:text-[var(--club-sand)]"
+                >About</a
+              >
+              <a
+                href="#membership"
+                class="nav-link text-white hover:text-[var(--club-sand)]"
+                >Membership</a
+              >
+              <a
+                href="gallery.html"
+                class="nav-link text-white hover:text-[var(--club-sand)]"
+                >Gallery</a
+              >
+              <a
+                href="events.html"
+                class="nav-link text-white hover:text-[var(--club-sand)]"
+                >Events</a
+              >
+              <a
+                href="#contact"
+                class="nav-link text-white hover:text-[var(--club-sand)]"
+                >Contact</a
+              >
+              <a
+                href="blog.html"
+                class="nav-link text-white hover:text-[var(--club-sand)]"
+                >Blogs</a
+              >
+              <a
+                href="faq.html"
+                class="nav-link text-white hover:text-[var(--club-sand)]"
+                >FAQ</a
+              >
+            </div>
+
+            <!-- Member Login Button (Desktop only) -->
+            <div class="hidden md:block font-['Montserrat']">
+              <a
+                href="login.html"
+                class="inline-block bg-[var(--club-rust)] hover:bg-[var(--club-dark-brown)] text-white font-semibold tracking-wide uppercase py-2.5 px-6 transition duration-300 nav-btn"
+                style="border-radius: 0"
+              >
+                Member Login
+              </a>
+            </div>
+
+            <!-- Mobile button -->
+            <button
+              id="mobile-menu-button"
+              type="button"
+              aria-controls="mobile-menu"
+              aria-expanded="false"
+              class="md:hidden p-2 rounded focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--club-rust)]"
+            >
+              <!-- Hamburger -->
+              <svg
+                id="hamburger-icon"
+                class="h-6 w-6 block text-white"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+
+              <!-- Close -->
+              <svg
+                id="close-icon"
+                class="h-6 w-6 hidden text-white"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div
+          id="mobile-menu"
+          class="hidden md:hidden bg-white border-t"
+          aria-hidden="true"
+        >
+          <div
+            class="px-4 pb-4 pt-2 space-y-1 font-['Montserrat'] uppercase tracking-wide"
+          >
+            <a
+              href="index.html"
+              class="block px-3 py-2 rounded text-gray-700 hover:bg-gray-100"
+              >Home</a
+            >
+            <a
+              href="#about"
+              class="block px-3 py-2 rounded text-gray-700 hover:bg-gray-100"
+              >About</a
+            >
+            <a
+              href="#membership"
+              class="block px-3 py-2 rounded text-gray-700 hover:bg-gray-100"
+              >Membership</a
+            >
+            <a
+              href="gallery.html"
+              class="block px-3 py-2 rounded text-gray-700 hover:bg-gray-100"
+              >Gallery</a
+            >
+            <a
+              href="events.html"
+              class="block px-3 py-2 rounded text-gray-700 hover:bg-gray-100"
+              >Events</a
+            >
+            <a
+              href="#contact"
+              class="block px-3 py-2 rounded text-gray-700 hover:bg-gray-100"
+              >Contact</a
+            >
+            <a
+              href="blog.html"
+              class="block px-3 py-2 rounded text-gray-700 hover:bg-gray-100"
+              >Blogs</a
+            >
+            <a
+              href="faq.html"
+              class="block px-3 py-2 rounded text-gray-700 hover:bg-gray-100"
+              >FAQ</a
+            >
+
+            <div class="pt-2">
+              <a
+                href="login.html"
+                class="block bg-[var(--club-rust)] hover:bg-[var(--club-dark-brown)] text-white font-semibold tracking-wide uppercase py-2.5 px-6 text-center transition duration-300"
+                style="border-radius: 0"
+              >
+                Member Login
+              </a>
+            </div>
+          </div>
+
+          <!-- Divider -->
+          <div class="border-t my-2"></div>
+
+          <!-- Contact Info -->
+          <div class="px-4 pb-4 text-gray-700 space-y-3 font-['Montserrat']">
+            <div class="flex items-center space-x-2">
+              <i
+                class="bx bx-envelope text-xl text-[var(--club-rust)]"
+                aria-hidden="true"
+              ></i>
+              <a
+                href="mailto:info@petpeople.com"
+                class="hover:text-[var(--club-rust)]"
+                >info@petpeople.com</a
+              >
+            </div>
+            <div class="flex items-center space-x-2">
+              <i
+                class="bx bx-phone text-xl text-[var(--club-rust)]"
+                aria-hidden="true"
+              ></i>
+              <a href="tel:+1234567890" class="hover:text-[var(--club-rust)]"
+                >+1 234 567 890</a
+              >
+            </div>
+
+            <!-- Social Media -->
+            <div class="flex space-x-4 mt-3">
+              <a
+                href="#"
+                class="text-gray-600 hover:text-[var(--club-rust)] text-2xl"
+                aria-label="Facebook"
+                ><i class="bx bxl-facebook"></i
+              ></a>
+              <a
+                href="#"
+                class="text-gray-600 hover:text-[var(--club-rust)] text-2xl"
+                aria-label="Instagram"
+                ><i class="bx bxl-instagram"></i
+              ></a>
+              <a
+                href="#"
+                class="text-gray-600 hover:text-[var(--club-rust)] text-2xl"
+                aria-label="Twitter"
+                ><i class="bx bxl-twitter"></i
+              ></a>
+              <a
+                href="#"
+                class="text-gray-600 hover:text-[var(--club-rust)] text-2xl"
+                aria-label="WhatsApp"
+                ><i class="bx bxl-whatsapp"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </nav>
     </header>
 
     <!-- Page Title -->
-    <section class="bg-[#E1AD01] py-10 text-center text-white">
-      <h2 class="text-3xl font-bold">Blog Details</h2>
-      <p class="mt-2">Read our latest stories and tips</p>
+
+    <section
+      class="relative bg-cover bg-center text-center text-white shadow-md"
+      style="
+        background-image: url('assets/hero1.webp');
+        padding-top: calc(2.5rem + 4rem); /* info-bar + navbar height */
+        padding-bottom: 6rem;
+      "
+    >
+      <div class="bg-black/30 w-full h-full absolute inset-0"></div>
+      <!-- optional dark overlay -->
+      <div class="relative z-10 max-w-7xl mx-auto px-4">
+        <h2 class="text-4xl tracking-wide font-bold">Blog Details</h2>
+        <p class="mt-2 text-lg text-[var(--club-sand)]">
+          Read our latest stories and tips
+        </p>
+      </div>
     </section>
 
+    <!-- Breadcrumb -->
+    <div class="max-w-7xl mx-auto px-4 mt-6 text-sm text-[var(--club-olive)]">
+      <a href="index.html" class="hover:text-[var(--club-rust)]">Home</a> /
+      <a href="blog.html" class="hover:text-[var(--club-rust)]">Blog</a> /
+      <span class="text-[var(--club-dark-brown)] font-medium"
+        >Blog Details</span
+      >
+    </div>
+
     <!-- Blog Content -->
-    <main class="max-w-5xl mx-auto px-4 py-12 grid md:grid-cols-3 gap-8">
+    <main class="max-w-7xl mx-auto px-4 py-12 grid md:grid-cols-3 gap-10">
       <!-- Blog Main -->
       <article
-        class="md:col-span-2 bg-white shadow rounded-xl overflow-hidden p-6"
+        class="md:col-span-2 bg-white shadow-lg rounded-2xl overflow-hidden p-6"
       >
         <img
-          src="https://placekitten.com/800/400"
+          src="assets/community.webp"
           alt="Blog Featured"
-          class="rounded-lg mb-6"
+          class="rounded-xl mb-6 hover:scale-[1.02] transition-transform duration-300"
         />
-        <h1 class="text-2xl font-bold mb-4">5 Tips for a Healthy Pup</h1>
-        <p class="text-gray-500 text-sm mb-6">By Admin • Sept 15, 2025</p>
+        <h1 class="text-3xl text-[var(--club-dark-brown)] mb-4">
+          5 Tips for a Healthy Pup
+        </h1>
+        <p class="text-sm text-gray-500 mb-6 font-light">
+          By Admin • Sept 15, 2025
+        </p>
 
-        <p class="mb-4">
+        <p class="mb-4 leading-relaxed">
           Dogs are wonderful companions, but keeping them healthy requires
           dedication. Here are five key tips to make sure your pup stays happy
           and active.
         </p>
-        <h2 class="text-xl font-semibold mb-2">1. Balanced Diet</h2>
-        <p class="mb-4">
+
+        <h2 class="text-2xl text-[var(--club-dark-brown)] mb-2">
+          1. Balanced Diet
+        </h2>
+        <p class="mb-4 leading-relaxed">
           Always ensure your dog is eating the right kind of food. A healthy
           diet keeps them energized and reduces the risk of diseases.
         </p>
-        <h2 class="text-xl font-semibold mb-2">2. Regular Exercise</h2>
-        <p class="mb-4">
+
+        <h2 class="text-2xl text-[var(--club-dark-brown)] mb-2">
+          2. Regular Exercise
+        </h2>
+        <p class="mb-4 leading-relaxed">
           Take your pup for walks, runs, or play fetch in the park. Exercise
           keeps their body and mind active.
         </p>
-        <h2 class="text-xl font-semibold mb-2">3. Veterinary Checkups</h2>
-        <p class="mb-4">
+
+        <h2 class="text-2xl text-[var(--club-dark-brown)] mb-2">
+          3. Veterinary Checkups
+        </h2>
+        <p class="mb-4 leading-relaxed">
           Regular vet visits help catch potential health problems early and keep
           vaccinations up to date.
         </p>
-        <h2 class="text-xl font-semibold mb-2">4. Socializing</h2>
-        <p class="mb-4">
+
+        <h2 class="text-2xl text-[var(--club-dark-brown)] mb-2">
+          4. Socializing
+        </h2>
+        <p class="mb-4 leading-relaxed">
           Meeting other dogs and humans reduces anxiety and helps improve your
           pet’s behavior in public.
         </p>
-        <h2 class="text-xl font-semibold mb-2">5. Lots of Love</h2>
-        <p>
+
+        <h2 class="text-2xl text-[var(--club-dark-brown)] mb-2">
+          5. Lots of Love
+        </h2>
+        <p class="leading-relaxed">
           Never underestimate the power of cuddles and playtime. Emotional
           well-being is as important as physical health.
         </p>
@@ -78,40 +427,318 @@
 
       <!-- Sidebar -->
       <aside class="space-y-6">
-        <div class="bg-white shadow rounded-xl p-4">
-          <h3 class="font-bold mb-3">Recent Posts</h3>
+        <!-- Recent Posts -->
+        <div
+          class="bg-white shadow-md rounded-2xl p-5 hover:shadow-lg transition duration-300"
+        >
+          <h3 class="font-semibold text-lg text-[var(--club-dark-brown)] mb-3">
+            Recent Posts
+          </h3>
           <ul class="space-y-2 text-sm">
             <li>
-              <a href="blog-details.html" class="hover:text-[#cc5410]"
+              <a href="blog-details.html" class="hover:text-[var(--club-rust)]"
                 >Why Socializing Matters</a
               >
             </li>
             <li>
-              <a href="blog-details.html" class="hover:text-[#cc5410]"
+              <a href="blog-details.html" class="hover:text-[var(--club-rust)]"
                 >Best Dog Parks in Nairobi</a
               >
             </li>
             <li>
-              <a href="blog-details.html" class="hover:text-[#cc5410]"
+              <a href="blog-details.html" class="hover:text-[var(--club-rust)]"
                 >How to Train Your Puppy</a
               >
             </li>
           </ul>
         </div>
-        <div class="bg-white shadow rounded-xl p-4">
-          <h3 class="font-bold mb-3">Categories</h3>
+
+        <!-- Categories -->
+        <div
+          class="bg-white shadow-md rounded-2xl p-5 hover:shadow-lg transition duration-300"
+        >
+          <h3 class="font-semibold text-lg text-[var(--club-dark-brown)] mb-3">
+            Categories
+          </h3>
           <ul class="space-y-2 text-sm">
-            <li><a href="#" class="hover:text-[#cc5410]">Training</a></li>
-            <li><a href="#" class="hover:text-[#cc5410]">Health</a></li>
-            <li><a href="#" class="hover:text-[#cc5410]">Lifestyle</a></li>
+            <li>
+              <a href="#" class="hover:text-[var(--club-rust)]">Training</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-[var(--club-rust)]">Health</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-[var(--club-rust)]">Lifestyle</a>
+            </li>
           </ul>
         </div>
       </aside>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-6 text-center mt-12">
-      <p>&copy; 2025 Fur & Friends Club. All rights reserved.</p>
+    <!-- FOOTER -->
+    <footer class="bg-[#480404] text-gray-200 pt-16 pb-8 font-['Montserrat']">
+      <div
+        class="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-12"
+      >
+        <!-- Logo + Tagline -->
+        <div>
+          <h3
+            class="text-3xl font-bold text-[var(--club-rust)] mb-4 font-['Satisfy']"
+          >
+            🐾 ThePetPeople
+          </h3>
+          <p
+            class="text-[var(--club-sand)] leading-relaxed font-['Playfair_Display']"
+          >
+            More than just a pet club – we’re a community where cats purr, dogs
+            wag, exotic pets thrive, and friendships between humans and animals
+            grow stronger every day.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-lg font-semibold text-white mb-4 font-['Cinzel']">
+            Quick Links
+          </h4>
+          <ul class="space-y-3">
+            <li>
+              <a href="#hero" class="hover:text-[var(--club-rust)] transition"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#community"
+                class="hover:text-[var(--club-rust)] transition"
+                >Community</a
+              >
+            </li>
+            <li>
+              <a
+                href="#membership"
+                class="hover:text-[var(--club-rust)] transition"
+                >Membership</a
+              >
+            </li>
+            <li>
+              <a href="#events" class="hover:text-[var(--club-rust)] transition"
+                >Events</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact"
+                class="hover:text-[var(--club-rust)] transition"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div>
+          <h4 class="text-lg font-semibold text-white mb-4 font-['Cinzel']">
+            Contact
+          </h4>
+          <ul class="space-y-3 text-[var(--club-sand)]">
+            <li class="flex items-center">
+              <i
+                class="fa-solid fa-location-dot text-[var(--club-rust)] w-6"
+              ></i>
+              <span class="ml-2">Nairobi, Kenya – Karen Dog Park Rd</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fa-solid fa-phone text-[var(--club-rust)] w-6"></i>
+              <span class="ml-2">+254 724 855 023</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fa-solid fa-envelope text-[var(--club-rust)] w-6"></i>
+              <span class="ml-2">info@furandfriendsclub.com</span>
+            </li>
+          </ul>
+
+          <!-- Social Icons -->
+          <div class="flex space-x-4 mt-6">
+            <a
+              href="#"
+              class="text-[var(--club-taupe)] hover:text-[var(--club-rust)] text-2xl transition"
+            >
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a
+              href="#"
+              class="text-[var(--club-taupe)] hover:text-[var(--club-rust)] text-2xl transition"
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a
+              href="#"
+              class="text-[var(--club-taupe)] hover:text-[var(--club-rust)] text-2xl transition"
+            >
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <div
+        class="border-t border-[var(--club-olive)] mt-12 pt-6 text-center text-gray-400 text-sm font-['Montserrat']"
+      >
+        © <span id="year"></span> Fur & Friends Club. All rights reserved.
+      </div>
     </footer>
+
+    <script>
+      // Auto-update year
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+    <!-- SCRIPTS -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const navbar = document.getElementById("navbar");
+        const infoBar = document.getElementById("info-bar");
+        const logoText = document.getElementById("logo-text");
+        const navLinks = document.querySelectorAll(".nav-link");
+        const menuButton = document.getElementById("mobile-menu-button");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const hamburgerIcon = document.getElementById("hamburger-icon");
+        const closeIcon = document.getElementById("close-icon");
+
+        // Navbar scroll effect (with color variables)
+        window.addEventListener("scroll", () => {
+          const navbar = document.getElementById("navbar");
+          const logoText = document.getElementById("logo-text");
+          const navLinks = document.querySelectorAll(".nav-link");
+          const hamburgerIcon = document.getElementById("hamburger-icon");
+          const closeIcon = document.getElementById("close-icon");
+
+          if (window.scrollY > 50) {
+            // Navbar background & shadow
+            navbar.classList.add("bg-white", "shadow-md");
+            navbar.classList.remove("bg-transparent");
+
+            // Logo color
+            logoText.classList.remove("text-white");
+            logoText.classList.add("text-[var(--club-rust)]");
+
+            // Nav links
+            navLinks.forEach((link) => {
+              link.classList.remove("text-white");
+              link.classList.add(
+                "text-[var(--club-dark-brown)]",
+                "hover:text-[var(--club-rust)]"
+              );
+            });
+
+            // Mobile icons
+            hamburgerIcon.classList.remove("text-white");
+            hamburgerIcon.classList.add("text-[var(--club-dark-brown)]");
+
+            closeIcon.classList.remove("text-white");
+            closeIcon.classList.add("text-[var(--club-dark-brown)]");
+          } else {
+            // Reset navbar background
+            navbar.classList.remove("bg-white", "shadow-md");
+            navbar.classList.add("bg-transparent");
+
+            // Logo back to white
+            logoText.classList.add("text-white");
+            logoText.classList.remove("text-[var(--club-rust)]");
+
+            // Nav links back to white
+            navLinks.forEach((link) => {
+              link.classList.add("text-white");
+              link.classList.remove(
+                "text-[var(--club-dark-brown)]",
+                "hover:text-[var(--club-rust)]"
+              );
+            });
+
+            // Mobile icons back to white
+            hamburgerIcon.classList.add("text-white");
+            hamburgerIcon.classList.remove("text-[var(--club-dark-brown)]");
+
+            closeIcon.classList.add("text-white");
+            closeIcon.classList.remove("text-[var(--club-dark-brown)]");
+          }
+        });
+
+        // Mobile nav toggle + icon swap
+        if (menuButton && mobileMenu && hamburgerIcon && closeIcon) {
+          menuButton.addEventListener("click", () => {
+            const isOpen = !mobileMenu.classList.contains("hidden");
+            mobileMenu.classList.toggle("hidden");
+            hamburgerIcon.classList.toggle("hidden");
+            closeIcon.classList.toggle("hidden");
+            menuButton.setAttribute("aria-expanded", String(!isOpen));
+          });
+
+          // close menu when clicking a link (mobile)
+          mobileMenu.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", () => {
+              mobileMenu.classList.add("hidden");
+              hamburgerIcon.classList.remove("hidden");
+              closeIcon.classList.add("hidden");
+              menuButton.setAttribute("aria-expanded", "false");
+            });
+          });
+        }
+
+        // ✅ Hero slider (safe init, fixed)
+        const slides = document.querySelectorAll("#hero-slider video");
+        let current = 0;
+
+        if (slides.length > 0) {
+          slides.forEach((s, i) => {
+            s.classList.add(
+              "transition-opacity",
+              "duration-1000",
+              "absolute",
+              "inset-0",
+              "w-full",
+              "h-full",
+              "object-cover"
+            );
+            if (i === 0) {
+              s.classList.remove("opacity-0");
+              s.classList.add("opacity-100");
+            } else {
+              s.classList.remove("opacity-100");
+              s.classList.add("opacity-0");
+            }
+          });
+
+          if (slides.length > 1) {
+            setInterval(() => {
+              slides[current].classList.remove("opacity-100");
+              slides[current].classList.add("opacity-0");
+
+              current = (current + 1) % slides.length;
+
+              slides[current].classList.remove("opacity-0");
+              slides[current].classList.add("opacity-100");
+            }, 5000);
+          }
+        }
+      });
+    </script>
+    <script>
+      const toggleBtn = document.getElementById("social-toggle");
+      const toggleIcon = document.getElementById("toggle-icon");
+      const socialIcons = document.getElementById("social-icons");
+
+      toggleBtn.addEventListener("click", () => {
+        socialIcons.classList.toggle("hidden");
+        if (socialIcons.classList.contains("hidden")) {
+          toggleIcon.classList.remove("bx-x");
+          toggleIcon.classList.add("bx-message-rounded-dots");
+        } else {
+          toggleIcon.classList.remove("bx-message-rounded-dots");
+          toggleIcon.classList.add("bx-x");
+        }
+      });
+    </script>
   </body>
 </html>

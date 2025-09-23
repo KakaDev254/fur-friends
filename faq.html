@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQ | The Pet People</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --club-dark-brown: #3f2c00;
+        --club-rust: #823210;
+        --club-olive: #95866e;
+        --club-taupe: #d2b699;
+        --club-sand: #fdf6ec;
+      }
+    </style>
+  </head>
+  <body class="bg-[#fefcf7] font-['Montserrat']">
+    <!-- HEADER -->
+    <header class="py-8 bg-[var(--club-rust)] text-white text-center">
+      <div class="mb-4">
+        <a
+          href="index.html"
+          class="inline-block bg-[var(--club-sand)] text-[var(--club-rust)] font-semibold py-2 px-6 shadow hover:shadow-lg hover:scale-105 transform transition duration-300"
+        >
+          Back to Home
+        </a>
+      </div>
+      <h1
+        class="text-4xl sm:text-5xl md:text-6xl font-normal font-['Cinzel'] tracking-wide"
+      >
+        <span>Where Pets Thrive</span>
+        <span class="block md:inline"><br class="md:hidden" /></span>
+        <span>Together</span>
+      </h1>
+    </header>
+
+    <!-- FAQ SECTION -->
+    <section id="faq" class="py-20">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <!-- Section Title -->
+        <h2
+          class="text-4xl md:text-5xl font-bold text-[var(--club-dark-brown)] mb-6 text-center font-['Playfair_Display']"
+        >
+          Frequently Asked
+          <span class="text-[var(--club-rust)]">Questions</span>
+        </h2>
+        <p
+          class="text-center text-[var(--club-olive)] max-w-3xl mx-auto mb-12 font-['Montserrat']"
+        >
+          Have questions about our services, membership, or events? Check out
+          our FAQ or reach out to us directly.
+        </p>
+
+        <!-- FAQ Accordion -->
+        <div class="space-y-4">
+          <!-- FAQ Item -->
+          <div class="border border-[var(--club-taupe)] p-6 cursor-pointer">
+            <div class="flex justify-between items-center faq-header">
+              <h3
+                class="text-lg font-semibold text-[var(--club-dark-brown)] font-['Montserrat']"
+              >
+                What are the membership plans available?
+              </h3>
+              <span class="text-[var(--club-rust)] faq-arrow">&#9660;</span>
+            </div>
+            <p class="mt-4 text-[var(--club-olive)] hidden font-['Montserrat']">
+              We offer Starter, Community, and Family Packs designed to suit
+              every pet family's needs. Each plan includes access to play areas,
+              events, and exclusive perks.
+            </p>
+          </div>
+
+          <div class="border border-[var(--club-taupe)] p-6 cursor-pointer">
+            <div class="flex justify-between items-center faq-header">
+              <h3
+                class="text-lg font-semibold text-[var(--club-dark-brown)] font-['Montserrat']"
+              >
+                Can I bring multiple pets?
+              </h3>
+              <span class="text-[var(--club-rust)] faq-arrow">&#9660;</span>
+            </div>
+            <p class="mt-4 text-[var(--club-olive)] hidden font-['Montserrat']">
+              Absolutely! Our Family Pack is perfect for households with
+              multiple pets. Each pet enjoys full access to our safe and fun
+              spaces.
+            </p>
+          </div>
+
+          <div class="border border-[var(--club-taupe)] p-6 cursor-pointer">
+            <div class="flex justify-between items-center faq-header">
+              <h3
+                class="text-lg font-semibold text-[var(--club-dark-brown)] font-['Montserrat']"
+              >
+                Are exotic pets allowed?
+              </h3>
+              <span class="text-[var(--club-rust)] faq-arrow">&#9660;</span>
+            </div>
+            <p class="mt-4 text-[var(--club-olive)] hidden font-['Montserrat']">
+              Yes! We welcome dogs, cats, and exotic pets like birds, reptiles,
+              and small mammals. Special care guidelines apply for their safety.
+            </p>
+          </div>
+
+          <div class="border border-[var(--club-taupe)] p-6 cursor-pointer">
+            <div class="flex justify-between items-center faq-header">
+              <h3
+                class="text-lg font-semibold text-[var(--club-dark-brown)] font-['Montserrat']"
+              >
+                How do I join an event?
+              </h3>
+              <span class="text-[var(--club-rust)] faq-arrow">&#9660;</span>
+            </div>
+            <p class="mt-4 text-[var(--club-olive)] hidden font-['Montserrat']">
+              Simply check our Upcoming Events section or contact us. Some
+              events may require RSVP depending on space and activity type.
+            </p>
+          </div>
+        </div>
+
+        <!-- CTA Button -->
+        <div class="text-center mt-12">
+          <a
+            href="#membership"
+            class="bg-gradient-to-r from-[var(--club-rust)] to-[var(--club-sand)] text-white font-semibold py-3 px-10 shadow-lg hover:shadow-xl hover:scale-105 transform transition duration-300 font-['Montserrat']"
+          >
+            Join the Community
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer
+      class="py-8 text-center text-[var(--club-dark-brown)] font-['Montserrat']"
+    >
+      &copy; 2025 The Pet People. All rights reserved.
+    </footer>
+
+    <!-- Accordion JS -->
+    <script>
+      const faqHeaders = document.querySelectorAll(".faq-header");
+      faqHeaders.forEach((header) => {
+        header.addEventListener("click", () => {
+          const content = header.nextElementSibling;
+          const arrow = header.querySelector(".faq-arrow");
+          content.classList.toggle("hidden");
+          arrow.classList.toggle("rotate-180");
+        });
+      });
+    </script>
+  </body>
+</html>
