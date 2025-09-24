@@ -83,6 +83,7 @@
               <span class="sr-only">Call</span>
               <span>+254 700 123 456</span>
             </a>
+
             <a
               href="mailto:info@thepetpeople.com"
               class="flex items-center space-x-2 hover:text-[var(--club-rust)] transition"
@@ -91,6 +92,11 @@
               <span class="sr-only">Email</span>
               <span>info@thepetpeople.com</span>
             </a>
+
+            <!-- Opening Hours -->
+            <span class="text-[var(--club-olive)] hidden sm:inline">
+              (Open Mon-Sat: 9am to 9pm | Sun: 10am to 8pm)
+            </span>
           </div>
         </div>
       </div>
@@ -373,21 +379,17 @@
       >
         <!-- Heading -->
         <h1
-          class="text-3xl sm:text-4xl md:text-6xl font-normal mb-4 sm:mb-6 md:mb-8 leading-snug sm:leading-snug md:leading-tight font-['Cinzel'] tracking-wide"
+          class="text-3xl sm:text-4xl md:text-6xl font-normal mb-4 sm:mb-6 md:mb-8 leading-snug md:leading-tight font-['Cinzel'] tracking-wide text-center"
         >
-          <span class="text-white">Where Pets Thrive</span>
-          <span class="block md:inline">
-            <br class="md:hidden" />
-          </span>
-          <span class="text-white">Together</span>
+          <span class="text-white block">Where Pets Thrive & Owners</span>
+          <span class="text-white block md:inline">Relax</span>
         </h1>
 
         <!-- Subtitle -->
         <p
           class="text-white text-sm sm:text-base md:text-xl mb-8 sm:mb-10 md:mb-12 max-w-xl sm:max-w-2xl font-['Playfair_Display'] italic leading-relaxed"
         >
-          A welcoming space for dogs, cats, and exotic pets — and the people who
-          love them.
+          Premium care, fun activities, and a community for pets & their people.
         </p>
 
         <!-- CTA buttons -->
@@ -655,7 +657,7 @@
         <p
           class="text-center text-[#454024] mb-10 font-['Montserrat'] text-lg max-w-3xl mx-auto"
         >
-          At Pawsome Club, we provide a range of services for dogs, cats, and
+          At The Pet People, we provide a range of services for dogs, cats, and
           exotic pets. From grooming and daycare to specialized training and fun
           activities, we ensure your pets are happy, healthy, and cared for in a
           safe environment.
@@ -663,99 +665,179 @@
 
         <!-- Services Grid -->
         <div
-          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6"
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
         >
-          <!-- Service Card Example -->
+          <!-- Boarding -->
+          <div class="relative group cursor-pointer overflow-hidden">
+            <img
+              src="assets/boarding.jpg"
+              alt="Boarding"
+              class="w-full h-96 object-cover transform transition-transform duration-500 group-hover:scale-110"
+            />
+            <div
+              class="absolute top-2 left-2 bg-[#823210] text-white px-3 py-1 text-sm font-semibold font-['Montserrat']"
+            >
+              Boarding 🏠
+            </div>
+            <div
+              class="absolute bottom-0 inset-x-0 bg-[#3f2c00]/80 text-white opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end justify-center text-center p-4 font-['Montserrat']"
+            >
+              Safe overnight and extended stays for your pets with loving care.
+            </div>
+          </div>
+
+          <!-- Grooming -->
           <div class="relative group cursor-pointer overflow-hidden">
             <img
               src="assets/grooming.jpg"
-              alt="Dog Grooming"
+              alt="Grooming"
               class="w-full h-96 object-cover transform transition-transform duration-500 group-hover:scale-110"
             />
             <div
               class="absolute top-2 left-2 bg-[#823210] text-white px-3 py-1 text-sm font-semibold font-['Montserrat']"
             >
-              Dog Grooming
+              Grooming ✂️
             </div>
             <div
               class="absolute bottom-0 inset-x-0 bg-[#3f2c00]/80 text-white opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end justify-center text-center p-4 font-['Montserrat']"
             >
-              Professional grooming for your dog including bath, haircut, and
-              nail trimming.
+              Bathing, haircut, nail trimming, and styling for all pets.
             </div>
           </div>
 
+          <!-- Play Time -->
           <div class="relative group cursor-pointer overflow-hidden">
             <img
-              src="assets/daycare.jpg"
-              alt="Cat Daycare"
+              src="assets/playtime.jpg"
+              alt="Play Time"
               class="w-full h-96 object-cover transform transition-transform duration-500 group-hover:scale-110"
             />
             <div
               class="absolute top-2 left-2 bg-[#823210] text-white px-3 py-1 text-sm font-semibold font-['Montserrat']"
             >
-              Cat Daycare
+              Play Time 🏊‍♂️
             </div>
             <div
               class="absolute bottom-0 inset-x-0 bg-[#3f2c00]/80 text-white opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end justify-center text-center p-4 font-['Montserrat']"
             >
-              Safe and playful environment for your cats while you're away.
+              Fun activities and supervised play sessions for socialization.
             </div>
           </div>
 
+          <!-- Curated Meals -->
           <div class="relative group cursor-pointer overflow-hidden">
             <img
-              src="assets/exotic.jpg"
-              alt="Exotic Pet Care"
+              src="assets/meals.jpg"
+              alt="Curated Meals"
               class="w-full h-96 object-cover transform transition-transform duration-500 group-hover:scale-110"
             />
             <div
               class="absolute top-2 left-2 bg-[#823210] text-white px-3 py-1 text-sm font-semibold font-['Montserrat']"
             >
-              Exotic Pet Care
+              Curated Meals 🍲
             </div>
             <div
               class="absolute bottom-0 inset-x-0 bg-[#3f2c00]/80 text-white opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end justify-center text-center p-4 font-['Montserrat']"
             >
-              Specialized care and handling for reptiles, birds, and small
-              mammals.
+              Balanced and customized meals for your pet's dietary needs.
             </div>
           </div>
 
+          <!-- Fitness & Training -->
           <div class="relative group cursor-pointer overflow-hidden">
             <img
               src="assets/training.jpg"
-              alt="Pet Training"
+              alt="Fitness & Training"
               class="w-full h-96 object-cover transform transition-transform duration-500 group-hover:scale-110"
             />
             <div
               class="absolute top-2 left-2 bg-[#823210] text-white px-3 py-1 text-sm font-semibold font-['Montserrat']"
             >
-              Pet Training
+              Fitness & Training 🐕
             </div>
             <div
               class="absolute bottom-0 inset-x-0 bg-[#3f2c00]/80 text-white opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end justify-center text-center p-4 font-['Montserrat']"
             >
-              Obedience and behavioral training for dogs, cats, and exotic pets.
+              Obedience, behavioral training, and active exercises for pets.
             </div>
           </div>
 
+          <!-- Pet Massages & Physio -->
           <div class="relative group cursor-pointer overflow-hidden">
             <img
-              src="assets/photo.jpg"
-              alt="Pet Photography"
+              src="assets/massage.png"
+              alt="Pet Massages"
               class="w-full h-96 object-cover transform transition-transform duration-500 group-hover:scale-110"
             />
             <div
               class="absolute top-2 left-2 bg-[#823210] text-white px-3 py-1 text-sm font-semibold font-['Montserrat']"
             >
-              Pet Photography
+              Massages & Physio
             </div>
             <div
               class="absolute bottom-0 inset-x-0 bg-[#3f2c00]/80 text-white opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end justify-center text-center p-4 font-['Montserrat']"
             >
-              Capture beautiful moments of your pets with professional
-              photography.
+              Therapeutic massages and physiotherapy for pets’ health.
+            </div>
+          </div>
+
+          <!-- Coffee Bar -->
+          <div class="relative group cursor-pointer overflow-hidden">
+            <img
+              src="assets/coffee.png"
+              alt="Pet People Coffee Bar"
+              class="w-full h-96 object-cover transform transition-transform duration-500 group-hover:scale-110"
+            />
+            <div
+              class="absolute top-2 left-2 bg-[#823210] text-white px-3 py-1 text-sm font-semibold font-['Montserrat']"
+            >
+              Pet People Coffee Bar
+            </div>
+            <div
+              class="absolute bottom-0 inset-x-0 bg-[#3f2c00]/80 text-white opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end justify-center text-center p-4 font-['Montserrat']"
+            >
+              Enjoy a coffee while your pets play or socialize.
+            </div>
+          </div>
+
+          <!-- Working Space -->
+          <div class="relative group cursor-pointer overflow-hidden">
+            <img
+              src="assets/workspace.jpg"
+              alt="Pet People Workspace"
+              class="w-full h-96 object-cover transform transition-transform duration-500 group-hover:scale-110"
+            />
+            <div
+              class="absolute top-2 left-2 bg-[#823210] text-white px-3 py-1 text-sm font-semibold font-['Montserrat']"
+            >
+              Working Space
+            </div>
+            <div
+              class="absolute bottom-0 inset-x-0 bg-[#3f2c00]/80 text-white opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end justify-center text-center p-4 font-['Montserrat']"
+            >
+              Dedicated workspace for pet owners to work while pets enjoy
+              activities.
+            </div>
+          </div>
+
+          <!-- Add-ons -->
+          <div
+            class="relative group cursor-pointer overflow-hidden col-span-full"
+          >
+            <img
+              src="assets/addons.png"
+              alt="Add-ons"
+              class="w-full h-60 object-cover transform transition-transform duration-500 group-hover:scale-110"
+            />
+            <div
+              class="absolute top-2 left-2 bg-[#823210] text-white px-3 py-1 text-sm font-semibold font-['Montserrat']"
+            >
+              Add-ons
+            </div>
+            <div
+              class="absolute bottom-0 inset-x-0 bg-[#3f2c00]/80 text-white opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end justify-center text-center p-4 font-['Montserrat']"
+            >
+              Pick-up/Drop-off 🚐 | Insurance 🛡️
             </div>
           </div>
         </div>
