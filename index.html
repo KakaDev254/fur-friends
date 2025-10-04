@@ -6,7 +6,7 @@
     <title>ThePetPeople</title>
 
     <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Satisfy&family=Cinzel:wght@400;500;600&family=Montserrat:wght@400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
 
@@ -30,6 +30,11 @@
         --club-lavender: #cbc0b3;
         --club-warm-tan: #b3967f;
         --club-copper: #bc7854;
+
+        /* New additions */
+        --club-brown-deep: #764923;
+        --club-brown-medium: #794f2b;
+        --club-brown-soft: #b7885c;
       }
 
       html {
@@ -49,60 +54,53 @@
       <!-- INFO BAR -->
       <div
         id="info-bar"
-        class="hidden md:flex bg-[var(--club-sand)] text-[var(--club-dark-brown)] text-sm transition-colors duration-300 py-[2px]"
+        class="hidden md:flex bg-[var(--club-brown-soft)] text-white text-xs transition-colors duration-300 py-[2px]"
       >
         <div
-          class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between w-full items-center"
+          class="max-w-7xl mx-auto px-3 sm:px-5 lg:px-8 flex justify-between w-full items-center"
         >
           <!-- Left side: social media -->
-          <div class="flex items-center space-x-4">
+          <div class="flex items-center space-x-3">
             <a
               href="#"
               class="hover:text-[var(--club-rust)] transition"
               aria-label="Facebook"
             >
-              <i class="bx bxl-facebook"></i>
+              <i class="bx bxl-facebook text-sm"></i>
             </a>
             <a
               href="#"
               class="hover:text-[var(--club-rust)] transition"
               aria-label="Instagram"
             >
-              <i class="bx bxl-instagram"></i>
+              <i class="bx bxl-instagram text-sm"></i>
             </a>
             <a
               href="#"
               class="hover:text-[var(--club-rust)] transition"
               aria-label="Twitter"
             >
-              <i class="bx bxl-twitter"></i>
+              <i class="bx bxl-twitter text-sm"></i>
             </a>
           </div>
 
+          <!-- Center: opening hours -->
+          <div
+            class="hidden sm:flex justify-center text-[10px] text-white font-['Montserrat']"
+          >
+            (Mon–Sat: 9am–9pm | Sun: 10am–8pm)
+          </div>
+
           <!-- Right side: contact -->
-          <div class="flex items-center space-x-6 font-['Montserrat']">
+          <div class="flex items-center space-x-2 font-['Montserrat']">
             <a
               href="tel:+254700123456"
-              class="flex items-center space-x-2 hover:text-[var(--club-rust)] transition"
+              class="flex items-center space-x-1 hover:text-[var(--club-rust)] transition"
             >
-              <i class="bx bx-phone" aria-hidden="true"></i>
+              <i class="bx bx-phone text-sm" aria-hidden="true"></i>
               <span class="sr-only">Call</span>
-              <span>+254 700 123 456</span>
+              <span class="text-[11px]">+254 700 123 456</span>
             </a>
-
-            <a
-              href="mailto:info@thepetpeople.com"
-              class="flex items-center space-x-2 hover:text-[var(--club-rust)] transition"
-            >
-              <i class="bx bx-envelope" aria-hidden="true"></i>
-              <span class="sr-only">Email</span>
-              <span>info@thepetpeople.com</span>
-            </a>
-
-            <!-- Opening Hours -->
-            <span class="text-[var(--club-olive)] hidden sm:inline">
-              (Open Mon-Sat: 9am to 9pm | Sun: 10am to 8pm)
-            </span>
           </div>
         </div>
       </div>
@@ -112,7 +110,7 @@
         id="navbar"
         role="navigation"
         aria-label="Main navigation"
-        class="navbar w-full bg-[var(--club-olive)]"
+        class="navbar w-full bg-[var(--club-brown-deep)]"
       >
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="flex justify-between h-16 items-center">
@@ -343,7 +341,7 @@
     <!-- HERO -->
     <section
       id="home"
-      class="relative w-full h-screen overflow-hidden font-['Playfair_Display']"
+      class="relative w-full h-[90vh] md:h-screen overflow-hidden font-['Cormorant_Garamond']"
     >
       <!-- Overlay with gradient -->
       <div
@@ -357,7 +355,6 @@
           alt="Pet Club Hero"
           class="absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-1000"
         />
-
         <video
           autoplay
           muted
@@ -367,7 +364,6 @@
         >
           <source src="assets/dogs2 (1) (1).mp4" type="video/mp4" />
         </video>
-
         <video
           autoplay
           muted
@@ -381,14 +377,14 @@
 
       <!-- Hero content -->
       <div
-        class="relative z-20 flex flex-col items-center justify-center h-full text-center px-6 sm:px-8 md:px-12 lg:px-20 pt-24 sm:pt-28 md:pt-32 py-8 md:py-12"
+        class="relative z-20 flex flex-col items-center justify-center h-full text-center px-6 sm:px-8 md:px-12 lg:px-20 pt-28 sm:pt-32 md:pt-40 xl:pt-48 py-8 md:py-12"
       >
         <!-- Heading -->
         <h1
-          class="text-2xl sm:text-3xl md:text-5xl font-normal mb-4 sm:mb-6 md:mb-8 leading-snug md:leading-tight font-['Cinzel'] tracking-wide text-center"
+          class="text-3xl sm:text-4xl md:text-6xl font-semibold mb-4 sm:mb-6 md:mb-8 leading-snug md:leading-tight text-white tracking-wide font-['Cormorant_Garamond'] text-center"
         >
-          <span class="text-white block">Love Them, Care for </span>
-          <span class="text-white block md:inline">Them</span>
+          <span class="block md:inline">Love Them, Care for&nbsp;</span>
+          <span class="block md:inline">Them</span>
         </h1>
 
         <!-- Subtitle -->
@@ -404,14 +400,14 @@
         >
           <a
             href="#contact"
-            class="inline-block bg-gradient-to-r from-[var(--club-taupe)] to-[var(--club-taupe)] text-white font-semibold uppercase tracking-wide py-3 px-8 sm:px-10 shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300 text-center"
+            class="inline-block bg-gradient-to-r from-[var(--club-brown-soft)] to-[var(--club-brown-soft)] text-white font-semibold uppercase tracking-wide py-3 px-8 sm:px-10 shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300 text-center"
           >
             Book Now
           </a>
 
           <a
             href="#services"
-            class="bg-transparent border-2 border-[var(--club-warm-tan)] text-white hover:bg-[var(--club-warm-tan)] hover:text-white font-semibold py-3 px-6 sm:px-8 transition text-center"
+            class="bg-transparent border-2 border-[var(--club-warm-tan)] text-white hover:bg-[var(--club-brown-medium)] hover:text-white font-semibold py-3 px-6 sm:px-8 transition text-center"
           >
             See Services
           </a>
@@ -502,7 +498,7 @@
             class="bg-white shadow hover:shadow-lg transition p-6 min-h-[28rem] flex flex-col"
           >
             <img
-              src="assets/black1.jpg"
+              src="assets/pet_friendly.jpg"
               alt="Pet Friendly Spaces"
               class="w-full h-60 object-cover mb-4"
               loading="lazy"
@@ -523,7 +519,7 @@
             class="bg-white shadow hover:shadow-lg transition p-6 min-h-[28rem] flex flex-col"
           >
             <img
-              src="assets/event1.jpg"
+              src="assets/community_dog.jpg"
               alt="Community Events"
               class="w-full h-60 object-cover mb-4"
               loading="lazy"
@@ -544,7 +540,7 @@
             class="bg-white shadow hover:shadow-lg transition p-6 min-h-[28rem] flex flex-col"
           >
             <img
-              src="assets/comuni.jpg"
+              src="assets/trusted.jpg"
               alt="Trusted and Loved"
               class="w-full h-60 object-cover mb-4"
               loading="lazy"
@@ -565,7 +561,7 @@
             class="bg-white shadow hover:shadow-lg transition p-6 min-h-[28rem] flex flex-col"
           >
             <img
-              src="assets/exotic2.jpg"
+              src="assets/secure.jpg"
               alt="Safe & Secure"
               class="w-full h-60 object-cover mb-4"
               loading="lazy"
