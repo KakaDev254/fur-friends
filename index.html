@@ -32,8 +32,8 @@
         --club-copper: #bc7854;
 
         /* New additions */
-        --club-brown-deep: #764923;
-        --club-brown-medium: #794f2b;
+        --club-brown-deep: #9a663b;
+        --club-brown-medium: #8e6643;
         --club-brown-soft: #b7885c;
       }
 
@@ -110,7 +110,7 @@
         id="navbar"
         role="navigation"
         aria-label="Main navigation"
-        class="navbar w-full bg-[var(--club-brown-deep)]"
+        class="navbar w-full bg-white"
       >
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="flex justify-between h-16 items-center">
@@ -131,37 +131,37 @@
             >
               <a
                 href="#about"
-                class="nav-link text-white hover:text-[var(--club-sand)]"
+                class="nav-link text-[var(--club-brown-deep)] hover:text-[var(--club-sand)]"
                 >About</a
               >
               <a
                 href="#membership"
-                class="nav-link text-white hover:text-[var(--club-sand)]"
+                class="nav-link text-[var(--club-brown-deep)] hover:text-[var(--club-sand)]"
                 >Membership</a
               >
               <a
                 href="gallery.html"
-                class="nav-link text-white hover:text-[var(--club-sand)]"
+                class="nav-link text-[var(--club-brown-deep)] hover:text-[var(--club-sand)]"
                 >Gallery</a
               >
               <a
                 href="events.html"
-                class="nav-link text-white hover:text-[var(--club-sand)]"
+                class="nav-link text-[var(--club-brown-deep)] hover:text-[var(--club-sand)]"
                 >Events</a
               >
               <a
                 href="#contact"
-                class="nav-link text-white hover:text-[var(--club-sand)]"
+                class="nav-link text-[var(--club-brown-deep)] hover:text-[var(--club-sand)]"
                 >Contact</a
               >
               <a
                 href="blog.html"
-                class="nav-link text-white hover:text-[var(--club-sand)]"
+                class="nav-link text-[var(--club-brown-deep)] hover:text-[var(--club-sand)]"
                 >Blogs</a
               >
               <a
                 href="faq.html"
-                class="nav-link text-white hover:text-[var(--club-sand)]"
+                class="nav-link text-[var(--club-brown-deep)] hover:text-[var(--club-sand)]"
                 >Shop</a
               >
             </div>
@@ -183,7 +183,7 @@
               type="button"
               aria-controls="mobile-menu"
               aria-expanded="false"
-              class="md:hidden p-2 rounded focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--club-rust)]"
+              class="md:hidden p-2 rounded focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white"
             >
               <!-- Hamburger -->
               <svg
@@ -192,7 +192,7 @@
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                stroke="currentColor"
+                stroke="var(--club-brown-soft)"
                 aria-hidden="true"
               >
                 <path
@@ -210,7 +210,7 @@
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                stroke="currentColor"
+                stroke="var(--club-brown-soft)"
                 aria-hidden="true"
               >
                 <path
@@ -233,32 +233,32 @@
           <div class="px-4 pb-4 pt-2 space-y-1 font-['Cormorant_Garamond']">
             <a
               href="#about"
-              class="block px-3 py-2 rounded text-gray-700 hover:bg-gray-100"
+              class="block px-3 py-2 rounded text-[var(--club-brown-deep)] hover:bg-gray-100"
               >About</a
             >
             <a
               href="#membership"
-              class="block px-3 py-2 rounded text-gray-700 hover:bg-gray-100"
+              class="block px-3 py-2 rounded text-[var(--club-brown-deep)] hover:bg-gray-100"
               >Membership</a
             >
             <a
               href="gallery.html"
-              class="block px-3 py-2 rounded text-gray-700 hover:bg-gray-100"
+              class="block px-3 py-2 rounded text-[var(--club-brown-deep)] hover:bg-gray-100"
               >Gallery</a
             >
             <a
               href="events.html"
-              class="block px-3 py-2 rounded text-gray-700 hover:bg-gray-100"
+              class="block px-3 py-2 rounded text-[var(--club-brown-deep)] hover:bg-gray-100"
               >Events</a
             >
             <a
               href="#contact"
-              class="block px-3 py-2 rounded text-gray-700 hover:bg-gray-100"
+              class="block px-3 py-2 rounded text-[var(--club-brown-deep)] hover:bg-gray-100"
               >Contact</a
             >
             <a
               href="blog.html"
-              class="block px-3 py-2 rounded text-gray-700 hover:bg-gray-100"
+              class="block px-3 py-2 rounded [var(--club-brown-deep)] hover:bg-gray-100"
               >Blogs</a
             >
             <a
@@ -348,19 +348,15 @@
 
       <!-- Background media -->
       <div id="hero-slider" class="absolute inset-0 z-0">
-        <img
-          src="assets/parrot2.jpg"
-          alt="Pet Club Hero"
-          class="absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-1000"
-        />
         <video
           autoplay
           muted
           loop
           playsinline
-          class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000"
+          class="absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-1000"
         >
-          <source src="assets/dogs2 (1) (1).mp4" type="video/mp4" />
+          <source src="assets/hero_vid1.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
         </video>
         <video
           autoplay
@@ -369,7 +365,16 @@
           playsinline
           class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000"
         >
-          <source src="assets/parrot2 (1) (1).mp4" type="video/mp4" />
+          <source src="assets/hero_vid3.mp4" type="video/mp4" />
+        </video>
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000"
+        >
+          <source src="assets/hero_vid4.mp4" type="video/mp4" />
         </video>
       </div>
 
@@ -613,7 +618,9 @@
           >
             More Than Just a Dog Park
           </h2>
-          <p class="text-white mb-8 leading-relaxed font-['Montserrat']">
+          <p
+            class="text-white mb-8 leading-relaxed font-['Cormorant_Garamond']"
+          >
             ThePetPeople Club is a community where lasting friendships are
             formed. Our members don't just bring their dogs – they bring their
             whole families and become part of something special.
@@ -735,7 +742,7 @@
           <!-- Play Time -->
           <div class="relative group cursor-pointer overflow-hidden">
             <img
-              src="assets/playtime.jpg"
+              src="assets/blog2.jpg"
               alt="Play Time"
               class="w-full h-96 object-cover transform transition-transform duration-500 group-hover:scale-110"
             />
@@ -870,7 +877,7 @@
           <!-- Working Space -->
           <div class="relative group cursor-pointer overflow-hidden">
             <img
-              src="assets/workspace.jpg"
+              src="assets/working_space.png"
               alt="Pet People Workspace"
               class="w-full h-96 object-cover transform transition-transform duration-500 group-hover:scale-110"
             />
