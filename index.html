@@ -21,20 +21,15 @@
     <style>
       :root {
         --club-dark-brown: #3f2c00;
+        --club-dark-brown-light: #827559;
         --club-olive: #454024;
+        --club-olive-light: #868270;
         --club-rust: #823210;
+        --club-rust-light: #ad7963;
         --club-taupe: #95866e;
+        --club-taupe-light: #bab0a0;
         --club-sand: #d2b699;
-
-        /* New colors */
-        --club-lavender: #cbc0b3;
-        --club-warm-tan: #b3967f;
-        --club-copper: #bc7854;
-
-        /* New additions */
-        --club-brown-deep: #9a663b;
-        --club-brown-medium: #8e6643;
-        --club-brown-soft: #b7885c;
+        --club-sand-light: #e1cfbc;
       }
 
       html {
@@ -54,7 +49,7 @@
       <!-- INFO BAR -->
       <div
         id="info-bar"
-        class="hidden md:flex bg-[var(--club-brown-soft)] text-white text-xs transition-colors duration-300 py-[2px]"
+        class="hidden md:flex bg-[var(--club-sand-light)] text-dark text-xs transition-colors duration-300 py-[2px]"
       >
         <div
           class="max-w-7xl mx-auto px-3 sm:px-5 lg:px-8 flex justify-between w-full items-center"
@@ -86,7 +81,7 @@
 
           <!-- Center: opening hours -->
           <div
-            class="hidden sm:flex justify-center text-[10px] text-white font-['Montserrat']"
+            class="hidden sm:flex justify-center text-[10px] text-dark font-['Montserrat']"
           >
             (Mon–Sat: 9am–9pm | Sun: 10am–8pm)
           </div>
@@ -115,14 +110,16 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="flex justify-between h-16 items-center">
             <!-- Logo -->
-            <a href="#home" class="flex items-center space-x-3">
-              <span
-                id="logo-text"
-                class="text-2xl font-bold text-[var(--club-brown-deep)] transition-colors"
-                style="font-family: 'Satisfy', cursive"
+            <a href="/" class="flex items-center gap-3">
+              <div
+                class="w-10 h-10 rounded-full bg-[var(--club-sand-light)] flex items-center justify-center text-[var(--club-dark-brown)] font-bold"
               >
-                ThePetPeople
-              </span>
+                TPP
+              </div>
+              <div>
+                <div class="text-sm font-medium">ThePetPeople</div>
+                <div class="text-xs text-gray-500">Care • Groom • Love</div>
+              </div>
             </a>
 
             <!-- Desktop links -->
@@ -168,7 +165,7 @@
             <div class="hidden md:block font-['Montserrat']">
               <a
                 href="login.html"
-                class="inline-block bg-[var(--club-copper)] hover:bg-[var(--club-dark-brown)] text-white tracking-wide uppercase py-2.5 px-6 transition duration-300 nav-btn"
+                class="inline-block bg-[var(--club-sand-light)] hover:bg-[var(--club-dark-brown)] text-white tracking-wide uppercase py-2.5 px-6 transition duration-300 nav-btn"
                 style="border-radius: 0"
               >
                 Login
@@ -190,7 +187,7 @@
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                stroke="var(--club-brown-soft)"
+                stroke="var(--club-sand)"
                 aria-hidden="true"
               >
                 <path
@@ -208,7 +205,7 @@
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                stroke="var(--club-brown-soft)"
+                stroke="var(--club-sand)"
                 aria-hidden="true"
               >
                 <path
@@ -268,7 +265,7 @@
             <div class="pt-2">
               <a
                 href="login.html"
-                class="block bg-[var(--club-copper)] hover:bg-[var(--club-dark-brown)] text-white tracking-wide uppercase py-2.5 px-6 text-center transition duration-300"
+                class="block bg-[var(--club-sand-light)] hover:bg-[var(--club-dark-brown)] text-white tracking-wide uppercase py-2.5 px-6 text-center transition duration-300"
                 style="border-radius: 0"
               >
                 Login
@@ -283,21 +280,21 @@
           <div class="px-4 pb-4 text-gray-700 space-y-3 font-['Montserrat']">
             <div class="flex items-center space-x-2">
               <i
-                class="bx bx-envelope text-xl text-[var(--club-rust)]"
+                class="bx bx-envelope text-xl text-[var(--club-sand)]"
                 aria-hidden="true"
               ></i>
               <a
                 href="mailto:info@petpeople.com"
-                class="hover:text-[var(--club-rust)]"
+                class="hover:text-[var(--club-sand)]"
                 >info@petpeople.com</a
               >
             </div>
             <div class="flex items-center space-x-2">
               <i
-                class="bx bx-phone text-xl text-[var(--club-rust)]"
+                class="bx bx-phone text-xl text-[var(--club-sand)]"
                 aria-hidden="true"
               ></i>
-              <a href="tel:+1234567890" class="hover:text-[var(--club-rust)]"
+              <a href="tel:+1234567890" class="hover:text-[var(--club-sand)]"
                 >+1 234 567 890</a
               >
             </div>
@@ -306,25 +303,25 @@
             <div class="flex space-x-4 mt-3">
               <a
                 href="#"
-                class="text-gray-600 hover:text-[var(--club-taupe)] text-2xl"
+                class="text-gray-600 hover:text-[var(--club-sand)] text-2xl"
                 aria-label="Facebook"
                 ><i class="bx bxl-facebook"></i
               ></a>
               <a
                 href="#"
-                class="text-gray-600 hover:text-[var(--club-taupe)] text-2xl"
+                class="text-gray-600 hover:text-[var(--club-sand)] text-2xl"
                 aria-label="Instagram"
                 ><i class="bx bxl-instagram"></i
               ></a>
               <a
                 href="#"
-                class="text-gray-600 hover:text-[var(--club-taupe)] text-2xl"
+                class="text-gray-600 hover:text-[var(--club-sand)] text-2xl"
                 aria-label="Twitter"
                 ><i class="bx bxl-twitter"></i
               ></a>
               <a
                 href="#"
-                class="text-gray-600 hover:text-[var(--club-taupe)] text-2xl"
+                class="text-gray-600 hover:text-[var(--club-sand)] text-2xl"
                 aria-label="WhatsApp"
                 ><i class="bx bxl-whatsapp"></i
               ></a>
@@ -354,7 +351,7 @@
           playsinline
           class="absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-1000"
         >
-          <source src="assets/hero_vid1.mp4" type="video/mp4" />
+          <source src="assets/vid1 (1) (1).mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <video
@@ -402,14 +399,14 @@
         >
           <a
             href="#contact"
-            class="inline-block bg-gradient-to-r from-[var(--club-brown-soft)] to-[var(--club-brown-soft)] text-white uppercase tracking-wide py-3 px-8 sm:px-10 shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300 text-center"
+            class="inline-block bg-[var(--club-sand)] text-dark uppercase tracking-wide py-3 px-8 sm:px-10 shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300 text-center"
           >
             Book Now
           </a>
 
           <a
             href="#services"
-            class="bg-transparent border-2 border-[var(--club-warm-tan)] text-white hover:bg-[var(--club-brown-medium)] hover:text-white py-3 px-6 sm:px-8 transition text-center"
+            class="inline-block border-2 border-[var(--club-taupe)] text-[var(--club-sand)] hover:bg-[var(--club-taupe)] hover:text-white font-['Montserrat'] tracking-wide py-3 px-8 sm:px-10 rounded transition duration-300 ease-in-out text-center"
           >
             See Services
           </a>
@@ -425,10 +422,10 @@
             Explore
           </span>
           <div
-            class="w-5 h-8 sm:w-6 sm:h-10 border-2 border-[var(--club-warm-tan)] rounded-full flex items-start justify-center p-1"
+            class="w-5 h-8 sm:w-6 sm:h-10 border-2 border-[var(--club-sand-light)] rounded-full flex items-start justify-center p-1"
           >
             <div
-              class="w-1 h-2 bg-[var(--club-warm-tan)] rounded-full animate-bounce"
+              class="w-1 h-2 bg-[var(--club-sand-light)] rounded-full animate-bounce"
             ></div>
           </div>
         </div>
@@ -710,7 +707,7 @@
               </p>
               <a
                 href="#booking"
-                class="bg-[var(--club-copper)] hover:bg-[var(--club-rust)] text-white px-4 py-2 rounded-full font-semibold transition"
+                class="bg-[var(--club-sand-light)] hover:bg-[var(--club-sand)] text-white px-4 py-2 rounded-full font-semibold transition"
               >
                 Book Now
               </a>
@@ -737,7 +734,7 @@
               </p>
               <a
                 href="#booking"
-                class="bg-[var(--club-copper)] hover:bg-[var(--club-rust)] text-white px-4 py-2 rounded-full font-semibold transition"
+                class="bg-[var(--club-sand-light)] hover:bg-[var(--club-sand)] text-white px-4 py-2 rounded-full font-semibold transition"
               >
                 Book Now
               </a>
@@ -764,7 +761,7 @@
               </p>
               <a
                 href="#booking"
-                class="bg-[var(--club-copper)] hover:bg-[var(--club-rust)] text-white px-4 py-2 rounded-full font-semibold transition"
+                class="bg-[var(--club-sand-light)] hover:bg-[var(--club-sand)] text-white px-4 py-2 rounded-full font-semibold transition"
               >
                 Book Now
               </a>
@@ -791,7 +788,7 @@
               </p>
               <a
                 href="#booking"
-                class="bg-[var(--club-copper)] hover:bg-[var(--club-rust)] text-white px-4 py-2 rounded-full font-semibold transition"
+                class="bg-[var(--club-sand-light)] hover:bg-[var(--club-sand)] text-white px-4 py-2 rounded-full font-semibold transition"
               >
                 Book Now
               </a>
@@ -818,7 +815,7 @@
               </p>
               <a
                 href="#booking"
-                class="bg-[var(--club-copper)] hover:bg-[var(--club-rust)] text-white px-4 py-2 rounded-full font-semibold transition"
+                class="bg-[var(--club-sand-light)] hover:bg-[var(--club-sand)] text-white px-4 py-2 rounded-full font-semibold transition"
               >
                 Book Now
               </a>
@@ -845,7 +842,7 @@
               </p>
               <a
                 href="#booking"
-                class="bg-[var(--club-copper)] hover:bg-[var(--club-rust)] text-white px-4 py-2 rounded-full font-semibold transition"
+                class="bg-[var(--club-sand-light)] hover:bg-[var(--club-sand)] text-white px-4 py-2 rounded-full font-semibold transition"
               >
                 Book Now
               </a>
@@ -872,7 +869,7 @@
               </p>
               <a
                 href="#booking"
-                class="bg-[var(--club-copper)] hover:bg-[var(--club-rust)] text-white px-4 py-2 rounded-full font-semibold transition"
+                class="bg-[var(--club-sand-light)] hover:bg-[var(--club-sand)] text-white px-4 py-2 rounded-full font-semibold transition"
               >
                 Book Now
               </a>
@@ -900,7 +897,7 @@
               </p>
               <a
                 href="#booking"
-                class="bg-[var(--club-copper)] hover:bg-[var(--club-rust)] text-white px-4 py-2 rounded-full font-semibold transition"
+                class="bg-[var(--club-sand-light)] hover:bg-[var(--club-sand)] text-white px-4 py-2 rounded-full font-semibold transition"
               >
                 Book Now
               </a>
@@ -927,7 +924,7 @@
               <p class="mb-3">Pick-up/Drop-off 🚐 | Insurance 🛡️</p>
               <a
                 href="#booking"
-                class="bg-[var(--club-copper)] hover:bg-[var(--club-rust)] text-white px-4 py-2 rounded-full font-semibold transition"
+                class="bg-[var(--club-sand-light)] hover:bg-[var(--club-sand)] text-white px-4 py-2 rounded-full font-semibold transition"
               >
                 Book Now
               </a>
@@ -1128,7 +1125,7 @@
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href="#membership"
-            class="bg-[var(--club-taupe)] hover:bg-[var(--club-dark-brown)] text-white font-medium py-3 px-6 transition font-['Inter']"
+            class="bg-[var(--club-sand-light)] hover:bg-[var(--club-sand)] text-white font-medium py-3 px-6 transition font-['Inter']"
           >
             Start Membership
           </a>
@@ -1165,7 +1162,7 @@
             fill="none"
             viewBox="0 0 24 24"
             stroke-width="1.2"
-            stroke="var(--club-brown-soft)"
+            stroke="var(--club-sand)"
             class="w-6 h-6 animate-bounce"
           >
             <path
@@ -1180,7 +1177,7 @@
         <div class="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
           <!-- Team Member 1 -->
           <div
-            class="bg-white border border-[var(--club-brown-soft)] shadow-sm hover:shadow-lg transition transform hover:-translate-y-2 hover:border-[var(--club-brown-medium)] p-6"
+            class="bg-white border border-[var(--club-sand)] shadow-sm hover:shadow-lg transition transform hover:-translate-y-2 hover:border-[var(--club-snad)] p-6"
           >
             <img
               src="assets/drm.jpg"
@@ -1188,12 +1185,12 @@
               class="w-40 h-40 object-cover mx-auto mb-4 rounded-full border-2 border-[var(--club-brown-soft)]"
             />
             <h3
-              class="text-xl font-semibold text-[var(--club-brown-deep)] font-['Cormorant_Garamond']"
+              class="text-xl font-semibold text-[var(--club-dark-brown)] font-['Cormorant_Garamond']"
             >
               Dr. Sophie Masika
             </h3>
             <p
-              class="text-[var(--club-brown-medium)] text-sm font-['Inter'] tracking-wide"
+              class="text-[var(--club-dark-brown-light)] text-sm font-['Inter'] tracking-wide"
             >
               Chief Veterinarian (KESCAVA Member)
             </p>
@@ -1201,7 +1198,7 @@
 
           <!-- Team Member 2 -->
           <div
-            class="bg-white border border-[var(--club-brown-soft)] shadow-sm hover:shadow-lg transition transform hover:-translate-y-2 hover:border-[var(--club-brown-medium)] p-6"
+            class="bg-white border border-[var(--club-sand)] shadow-sm hover:shadow-lg transition transform hover:-translate-y-2 hover:border-[var(--club-sand)] p-6"
           >
             <img
               src="assets/drm.jpg"
@@ -1209,12 +1206,12 @@
               class="w-40 h-40 object-cover mx-auto mb-4 rounded-full border-2 border-[var(--club-brown-soft)]"
             />
             <h3
-              class="text-xl font-semibold text-[var(--club-brown-deep)] font-['Cormorant_Garamond']"
+              class="text-xl font-semibold text-[var(--club-dark-brown)] font-['Cormorant_Garamond']"
             >
               Dr. John Mwangi
             </h3>
             <p
-              class="text-[var(--club-brown-medium)] text-sm font-['Inter'] tracking-wide"
+              class="text-[var(--club-dark-brown-light)] text-sm font-['Inter'] tracking-wide"
             >
               Head of Pet Care & Training
             </p>
@@ -1222,7 +1219,7 @@
 
           <!-- Team Member 3 -->
           <div
-            class="bg-white border border-[var(--club-brown-soft)] shadow-sm hover:shadow-lg transition transform hover:-translate-y-2 hover:border-[var(--club-brown-medium)] p-6"
+            class="bg-white border border-[var(--club-sand)] shadow-sm hover:shadow-lg transition transform hover:-translate-y-2 hover:border-[var(--club-sand)] p-6"
           >
             <img
               src="assets/drm.jpg"
@@ -1230,12 +1227,12 @@
               class="w-40 h-40 object-cover mx-auto mb-4 rounded-full border-2 border-[var(--club-brown-soft)]"
             />
             <h3
-              class="text-xl font-semibold text-[var(--club-brown-deep)] font-['Cormorant_Garamond']"
+              class="text-xl font-semibold text-[var(--club-dark-brown)] font-['Cormorant_Garamond']"
             >
               Dr. Aisha Kamau
             </h3>
             <p
-              class="text-[var(--club-brown-medium)] text-sm font-['Inter'] tracking-wide"
+              class="text-[var(--club-dark-brown-light)] text-sm font-['Inter'] tracking-wide"
             >
               Veterinary Partner (KVA Member)
             </p>
@@ -1248,7 +1245,7 @@
         >
           <!-- Badge 1 -->
           <div
-            class="flex items-center justify-center gap-2 border border-[var(--club-brown-soft)] text-[var(--club-brown-medium)] px-5 py-3 shadow-sm transition hover:bg-[var(--club-brown-soft)] hover:text-white hover:shadow-md w-full sm:w-auto font-['Inter'] text-sm"
+            class="flex items-center justify-center gap-2 border border-[var(--club-dark-brown)] text-[var(--club-dark-brown-light)] px-5 py-3 shadow-sm transition hover:bg-[var(--club-sand-light)] hover:text-white hover:shadow-md w-full sm:w-auto font-['Inter'] text-sm"
           >
             <i class="fa-solid fa-shield-dog text-[var(--club-brown-deep)]"></i>
             <span class="font-medium">KVA Certified</span>
@@ -1256,7 +1253,7 @@
 
           <!-- Badge 2 -->
           <div
-            class="flex items-center justify-center gap-2 border border-[var(--club-brown-soft)] text-[var(--club-brown-medium)] px-5 py-3 shadow-sm transition hover:bg-[var(--club-brown-soft)] hover:text-white hover:shadow-md w-full sm:w-auto font-['Inter'] text-sm"
+            class="flex items-center justify-center gap-2 border border-[var(--club-dark-brown)] text-[var(--club-dark-brown-light)] px-5 py-3 shadow-sm transition hover:bg-[var(--club-sand-light)] hover:text-white hover:shadow-md w-full sm:w-auto font-['Inter'] text-sm"
           >
             <i class="fa-solid fa-paw text-[var(--club-brown-deep)]"></i>
             <span class="font-medium">KESCAVA Affiliated</span>
@@ -1264,7 +1261,7 @@
 
           <!-- Badge 3 -->
           <div
-            class="flex items-center justify-center gap-2 border border-[var(--club-brown-soft)] text-[var(--club-brown-medium)] px-5 py-3 shadow-sm transition hover:bg-[var(--club-brown-soft)] hover:text-white hover:shadow-md w-full sm:w-auto font-['Inter'] text-sm"
+            class="flex items-center justify-center gap-2 border border-[var(--club-dark-brown)] text-[var(--club-dark-brown-light)] px-5 py-3 shadow-sm transition hover:bg-[var(--club-sand-light)] hover:text-white hover:shadow-md w-full sm:w-auto font-['Inter'] text-sm"
           >
             <i class="fa-solid fa-camera text-[var(--club-brown-deep)]"></i>
             <span class="font-medium">CCTV Monitoring</span>
@@ -1272,7 +1269,7 @@
 
           <!-- Badge 4 -->
           <div
-            class="flex items-center justify-center gap-2 border border-[var(--club-brown-soft)] text-[var(--club-brown-medium)] px-5 py-3 shadow-sm transition hover:bg-[var(--club-brown-soft)] hover:text-white hover:shadow-md w-full sm:w-auto font-['Inter'] text-sm"
+            class="flex items-center justify-center gap-2 border border-[var(--club-dark-brown)] text-[var(--club-dark-brown-light)] px-5 py-3 shadow-sm transition hover:bg-[var(--club-sand-light)] hover:text-white hover:shadow-md w-full sm:w-auto font-['Inter'] text-sm"
           >
             <i class="fa-solid fa-clock text-[var(--club-brown-deep)]"></i>
             <span class="font-medium">24/7 Supervision</span>
@@ -1280,7 +1277,7 @@
 
           <!-- Badge 5 -->
           <div
-            class="flex items-center justify-center gap-2 border border-[var(--club-brown-soft)] text-[var(--club-brown-medium)] px-5 py-3 shadow-sm transition hover:bg-[var(--club-brown-soft)] hover:text-white hover:shadow-md w-full sm:w-auto font-['Inter'] text-sm"
+            class="flex items-center justify-center gap-2 border border-[var(--club-dark-brown)] text-[var(--club-dark-brown-light)] px-5 py-3 shadow-sm transition hover:bg-[var(--club-sand-light)] hover:text-white hover:shadow-md w-full sm:w-auto font-['Inter'] text-sm"
           >
             <i
               class="fa-solid fa-heart-pulse text-[var(--club-brown-deep)]"
